@@ -1,0 +1,24 @@
+package com.demo.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class preparedStatement {
+
+	public static void main(String[] args) {
+		
+		//register driver 
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+		
+		//connecting the database
+		String url = "jdbc:mysql://192.168.10.117:3306/dac104?useSSL=false";
+		Connection conn = DriverManager.getConnection(url, "dac104", "welcom");
+		
+		PreparedStatement pst = conn.preparedStatement("select * from emp");
+		
+		ResultSet rs = pst.executeQuery();
+	}
+
+}

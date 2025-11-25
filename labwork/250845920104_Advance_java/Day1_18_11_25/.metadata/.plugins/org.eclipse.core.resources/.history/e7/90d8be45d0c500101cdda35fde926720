@@ -1,0 +1,16 @@
+package com.demo.service;
+
+import com.demo.beans.Product;
+
+public interface ProductService {
+
+	boolean addProduct();
+
+	boolean deleteById(int pid);
+
+	boolean modifyById(int a, String pname, double price);
+
+	
+	Product findbyId(int id);
+
+}

@@ -1,0 +1,12 @@
+package com.demo.beans;
+
+public class Emplyee {
+	EMPNO | ENAME    | GENDER | JOB  USER NAME    | PWD
+	private int empno;
+	private String ename;
+	private char gender;
+	private String job;
+	private String usrname;
+	private String pwd;
+	
+}

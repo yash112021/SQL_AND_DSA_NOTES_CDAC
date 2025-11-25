@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+Name: <input type="text" name="nm" id="nm">
+Values: <input type="number" name="value" id="value">
+<button type="submit" name="btn" id="btn" value="add">Add Cookies</button>
+<button type="submit" name="btn" id="btn" value="delete">Delete Cookies</button>
+<button type="submit" name="btn" id="btn" value="display">Display Cookies</button>
+</body>
+</html>

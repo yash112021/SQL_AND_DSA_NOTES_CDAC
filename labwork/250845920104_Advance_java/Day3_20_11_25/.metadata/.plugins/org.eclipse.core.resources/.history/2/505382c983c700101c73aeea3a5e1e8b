@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="billcalc" method="get">
+  Numbers of units : <input type="number" name = "units" id="units"></input>
+  <button type="submit" name="btn" id="btn">Bill amount</button>
+</form>
+</body>
+</html>

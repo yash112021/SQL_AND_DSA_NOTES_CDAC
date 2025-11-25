@@ -1,0 +1,57 @@
+package com.demo.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class CookieServlets
+ */
+@WebServlet({ "/CookieServlets", "/cooki" })
+public class CookieServlets extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+  
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		String name = request.getParameter("nm");
+		String button = request.getParameter("btn");
+		
+		switch(button) {
+		
+			case "add" ->{
+				String value = request.getParameter("value");
+				Cookie c = new Cookie(name,value);
+				response.addCookie(c);
+				out.println("<h1>cookie added successfully</h1>");
+			}
+			case "delete" ->{
+				Cookie [] carr = request.getCookies();
+				for(Cookie c : carr) {
+					if(c.getName().equals(name)) {
+						c.setMaxAge(0);
+						response.addCookie(c);
+						out.println("<h1>Cookie "+name+"  deleted successfully</h1>");
+						break;
+					}
+				}
+			}
+			case "display" ->{
+				Cookie [] carr = request.getCookies();
+				for(Cookie c: carr) {
+					out.println("name :"+ c.getName()+"--->values"+c.getValue());
+				}
+			}
+		}
+	}
+
+
+}

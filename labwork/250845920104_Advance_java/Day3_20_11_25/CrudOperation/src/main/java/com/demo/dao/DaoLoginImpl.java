@@ -1,0 +1,52 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.demo.beans.Emplyee;
+
+public class DaoLoginImpl implements DaoLogin{
+	// making A Connectino
+	static Connection conn=null;
+	// making of the prepaid Statemetn
+	static PreparedStatement valuser;
+	static {
+		try {
+			conn=DBUtil.getMyConnection();
+			valuser=conn.prepareStatement("select  EMPNO ,ENAME ,GENDER ,JOB ,  'USER NAME', PWD from emp where ENAME=? and PWD=? ");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	@Override
+	public Emplyee valuser(String name, String pass) {
+		// Setting the value of the Question Mark 
+	
+		try {
+			valuser.setString(1, name);
+			valuser.setString(2, pass);
+			// reuslt set 
+			ResultSet rs= valuser.executeQuery();
+			// while loop 
+			while(rs.next()) {
+				// Storing the data in the Emplyee
+//				int empno, String ename, char gender, String job, String usrname, String pwd
+				Emplyee e =new Emplyee(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6));
+				return e;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+}

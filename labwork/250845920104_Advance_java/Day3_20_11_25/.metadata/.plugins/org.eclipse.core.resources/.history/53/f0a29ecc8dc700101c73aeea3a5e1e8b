@@ -1,0 +1,25 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+import com.demo.beans.Emplyee;
+
+public class DaoLoginImpl implements DaoLogin{
+	// making A Connectino
+	static Connection conn=null;
+	// making of the prepaid Statemetn
+	static Statement valuser;
+	static {
+		
+	}
+	
+	
+	
+	@Override
+	public Emplyee valuser(String name, String pass) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

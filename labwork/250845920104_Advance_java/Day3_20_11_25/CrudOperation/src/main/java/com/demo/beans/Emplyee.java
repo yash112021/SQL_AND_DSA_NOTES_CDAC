@@ -1,0 +1,81 @@
+package com.demo.beans;
+
+public class Emplyee {
+	
+	private int empno;
+	private String ename;
+	private String gender;
+	private String job;
+	private String usrname;
+	private String pwd;
+	
+	// default constructor
+	public Emplyee() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "Emplyee [empno=" + empno + ", ename=" + ename + ", gender=" + gender + ", job=" + job + ", usrname="
+				+ usrname + ", pwd=" + pwd + "]";
+	}
+
+	public int getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public String getUsrname() {
+		return usrname;
+	}
+
+	public void setUsrname(String usrname) {
+		this.usrname = usrname;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public Emplyee(int empno, String ename, String gender, String job, String usrname, String pwd) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.gender = gender;
+		this.job = job;
+		this.usrname = usrname;
+		this.pwd = pwd;
+	}
+	
+}

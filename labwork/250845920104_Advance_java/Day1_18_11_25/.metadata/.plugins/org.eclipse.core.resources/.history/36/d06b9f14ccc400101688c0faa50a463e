@@ -1,0 +1,59 @@
+package com.demo.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CreateStatement {
+	public static void main(String args[]) {
+		Connection conn=null;
+	try {	
+		// making the jdbc connection by using the the type 4  driver
+		
+		// Step1 Register the driver and the load the driver
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+		
+		// step2 getting the connection
+		String url="jdbc:mysql://192.168.10.117:3306/dac104?useSSL=false";
+		conn=DriverManager.getConnection(url,"dac104","welcome");
+		
+		//nowchecking whether the connection take place or not
+		if(conn!=null) {
+			System.out.println("Conection done Succesfully .....");
+		}else {
+			System.out.println("Connection Not done..**");
+		}
+		
+		// step3 Statement 
+		// in these we are using the Create Statement
+		Statement st=conn.createStatement();
+		
+		// Step4 resultant set
+		ResultSet rs=st.executeQuery("Select * from emp");
+		
+		// now using the while loop to print it till the the end
+		
+		while(rs.next()) {
+			System.out.println("**************************************************************");
+			System.out.println("Employee No -->"+rs.getString(1));
+			System.out.println("Employee Name -->"+rs.getString(2));
+			System.out.println("Employee job -->"+rs.getString(4));
+			
+			System.out.println("**************************************************************");
+			
+		}
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+	}finally {
+		try {
+			conn.close();
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	}
+}

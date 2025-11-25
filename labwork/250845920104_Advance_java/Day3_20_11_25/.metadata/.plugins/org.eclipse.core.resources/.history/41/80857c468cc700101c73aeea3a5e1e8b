@@ -1,0 +1,37 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBUtil {
+	// this class is making for connetion by using the single pattern
+	public static Connection conn=null;
+	
+	
+	// method GetMyConnection its return type is to the Connection
+	
+	public Connection getMyConnection()  {
+		if(conn==null) {
+			try {
+				DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+				String url="jdbc:mysql://192.168.10.117:3306/dac104?useSSL=false";
+				conn=DriverManager.getConnection(url,"dac104","welcome");
+				return conn;
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+
+		}
+		
+		return null;
+	}
+	
+	// fucntion for closing the Conneciont
+	public void closeConnection() {
+		conn.close();
+	}
+}

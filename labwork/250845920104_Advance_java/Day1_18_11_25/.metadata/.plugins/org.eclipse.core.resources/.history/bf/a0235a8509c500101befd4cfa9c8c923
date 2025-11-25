@@ -1,0 +1,26 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+import com.demo.service.ProductService;
+import com.demo.service.ProductServiceImpl;
+
+public class TestProduct {
+
+	public static void main(String [] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int choice =0;
+		
+		ProductService pservice = new ProductServiceImpl();
+		
+		do {
+			
+			System.out.println("1.Add new product\n2.delete product\n3.modify product");
+			System.out.println("4.find by Id\n5.display all\6.display in sorted order\n7.exit");
+			System.out.println("Enter your choice");
+			choice = sc.nextInt();
+			
+		}while(choice!=5);
+	}
+}

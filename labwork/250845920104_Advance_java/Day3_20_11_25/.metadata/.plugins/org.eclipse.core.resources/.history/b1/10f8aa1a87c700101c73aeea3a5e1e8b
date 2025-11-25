@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>DemoServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MyServlet</display-name>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.demo.servlet.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  <!--  comment  -->
+   <servlet>
+      <servlet-name>Yash</servlet-name>
+      <servlet-class>com.demo.servlet.ServletOperations</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+     <servlet-name>Yash</servlet-name>
+     <url-pattern>/yash</url-pattern>
+  </servlet-mapping>
+  
+  <!-- now createing the servlet for Simple Interest> -->
+  <servlet>
+  		<servlet-name>si</servlet-name>
+  		<servlet-class>com.demo.servlet.ServletInterest</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  		<servlet-name>si</servlet-name>
+  		<url-pattern>/interest</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>Bill</servlet-name>
+  <servlet-class>com.demo.servlet.MsebBillCalc</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Bill</servlet-name>
+  <url-pattern>/billcalc</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

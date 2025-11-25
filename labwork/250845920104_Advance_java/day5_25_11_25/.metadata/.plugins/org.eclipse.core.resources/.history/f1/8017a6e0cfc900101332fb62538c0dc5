@@ -1,0 +1,21 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+
+import com.demo.beans.User;
+
+public class LoginDaoImpl implements LoginDao{
+
+	static Connection  conn;
+	static {
+		conn=DBUtil.getMyConnection();
+	}
+	
+	
+	@Override
+	public User validateUsr(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

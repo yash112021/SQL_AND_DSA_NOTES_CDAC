@@ -1,0 +1,11 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+
+public class DBUtil {
+	// this class is for creating the Connection with Mysql it ensure that only the connection is being created
+	static Connection conn=null;
+	static {
+		
+	}
+}

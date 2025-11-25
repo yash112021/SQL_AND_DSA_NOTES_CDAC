@@ -1,0 +1,30 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.demo.beans.User;
+
+
+public class LoginDaoImpl implements LoginDao{
+
+	static Connection  conn;
+	static {
+		conn=DBUtil.getMyConnection();
+	}
+	
+	
+	@Override
+	public User validateUsr(User user) {
+		// now we are going to create the prepared statemetn here
+		try {
+			Statement st=conn.prepareStatement("select * from valuser where username=? and password=?");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="javascriptptreact">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+	<form action="interest" >
+    <!-- finding the interrest of the HTML -->
+        Enter the Principal : <input type="number" name="princi" id="princi">
+        Enter the year: <input type="number" name="year" id="year">
+        Enter the rate : <input type="number" name="rate" id="rate">
+
+    <button name="btn" value="btn">submit</button>
+    </form>
+</body>
+</html>

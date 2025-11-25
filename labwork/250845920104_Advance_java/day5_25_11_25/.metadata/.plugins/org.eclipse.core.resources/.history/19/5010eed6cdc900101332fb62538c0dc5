@@ -1,0 +1,13 @@
+package com.demo.service;
+
+import com.demo.beans.User;
+
+public class LoginServiceImpl implements LoginService{
+
+	@Override
+	public User finduser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

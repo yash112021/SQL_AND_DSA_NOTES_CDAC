@@ -1,0 +1,44 @@
+package com.demo.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class preparedStatement {
+
+	public static void main(String[] args) {
+		Connection conn=null;
+		try {
+		//register driver 
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+		
+		//connecting the database
+		String url = "jdbc:mysql://192.168.10.117:3306/dac104?useSSL=false";
+		conn = DriverManager.getConnection(url, "dac104", "welcome");
+		
+		PreparedStatement pst = conn.prepareStatement("select * from emp");
+		
+		ResultSet rs = pst.executeQuery();
+		
+		while(rs.next()) {
+			System.out.println("EmployeeId" +rs.getInt(1));
+			System.out.println("EmployeeName" + rs.getString("ENAME"));
+			System.out.println("EmployeeGender"+ rs.getString("GENDER"));
+			System.out.println("EmployeeJob"+ rs.getString("JOB"));
+		}
+//		PreparedStatement prest = conn.prepareStatement("insert into ")
+	}catch(SQLException e){
+		e.printStackTrace();
+	}
+		finally {
+		try {
+			conn.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	}
+}

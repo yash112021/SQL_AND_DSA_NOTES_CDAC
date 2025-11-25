@@ -1,0 +1,12 @@
+127.0.0.1 - - [24/Nov/2025:04:56:52 -0800] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:56:52 -0800] "GET /ProductCrudOperations/index.html HTTP/1.1" 200 503
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:56:52 -0800] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:10 -0800] "GET /ProductCrudOperations/index.html HTTP/1.1" 200 501
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:15 -0800] "GET /ProductCrudOperations/loginpage?usrname=yash&pass=aptil&login= HTTP/1.1" 404 786
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:27 -0800] "GET /ProductCrudOperations/loginpage?usrname=yash&pass=aptil&login= HTTP/1.1" 404 786
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:30 -0800] "GET /ProductCrudOperations/loginpage?usrname=yash&pass=aptil&login= HTTP/1.1" 404 786
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:32 -0800] "GET /ProductCrudOperations/loginpage?usrname=yash&pass=aptil&login= HTTP/1.1" 404 786
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:32 -0800] "GET /ProductCrudOperations/loginpage?usrname=yash&pass=aptil&login= HTTP/1.1" 404 786
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:34 -0800] "GET /ProductCrudOperations/index.html HTTP/1.1" 200 509
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:34 -0800] "GET /ProductCrudOperations/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Nov/2025:04:57:36 -0800] "GET /ProductCrudOperations/loginpage?usrname=&pass=&login= HTTP/1.1" 404 786

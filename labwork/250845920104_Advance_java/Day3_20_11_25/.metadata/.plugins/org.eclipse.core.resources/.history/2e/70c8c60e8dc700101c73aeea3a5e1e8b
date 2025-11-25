@@ -1,0 +1,15 @@
+package com.demo.service;
+
+import com.demo.beans.Emplyee;
+
+public class LoginServiceImpl implements LoginService {
+	
+	DaoLogin edao;
+
+	@Override
+	public Emplyee validateUser(String name, String pass) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

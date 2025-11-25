@@ -1,0 +1,133 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.demo.beans.Product;
+
+public class ProductDaoImpl implements ProductDao {
+	
+	static Connection conn;
+	static PreparedStatement insertprod,deleteById, updbyid, findbyid,getAllproduct,showInsorted; 
+	
+	static {
+		try {
+			conn=DBUtil.getMyConnection();
+			insertprod = conn.prepareStatement("insert into product values(?,?,?)");
+			deleteById = conn.prepareStatement("delete from product where pid=?");
+			updbyid= conn.prepareStatement("update table product set DESCRIP=?,PRICE=? where PRODID=?");
+			findbyid= conn.prepareStatement("select * from product where PRODID=?");
+			getAllproduct= conn.prepareStatement("select * from product");
+			showInsorted = conn.prepareStatement("select * from product order by ?");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public boolean save(Product p) {
+		try {
+			
+			insertprod.setInt(1, p.getPid());
+			insertprod.setString(2, p.getPdesc());
+			insertprod.setDouble(3, p.getPrice());
+			
+			int n = insertprod.executeUpdate();
+			
+			if(n>0) {
+				return true;
+			}
+			return false;
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	@Override
+	public boolean removeById(int pid) {
+		try {
+			deleteById.setInt(1, pid);
+			int n=deleteById.executeUpdate();
+			if(n>0) {
+				return true;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	// update by id
+	@Override
+	public boolean updateByid(int a, String pname, double price) {
+		try {
+			int aa=updbyid.executeUpdate();
+			if(aa>0) {
+				return true;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	// find by product id
+	@Override
+	public Product findbyIdproduct(int id) {
+		Product p=null;
+		try {
+			// result needed
+			findbyid.setInt(1, id);
+			ResultSet rs=findbyid.executeQuery();
+			while(rs.next()) {
+				p=new Product(rs.getInt(1),rs.getString(2),rs.getDouble(3));
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		return p;
+	}
+
+	@Override
+	public List<Product> getAllproduct() {
+		List<Product> plst = new ArrayList<>();
+		try {
+			ResultSet rs = getAllproduct.executeQuery();
+			while(rs.next()) {
+				plst.add(new Product(rs.getInt(1),rs.getString(2),rs.getDouble(3)));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return plst;
+	}
+
+	@Override
+	public List<Product> showInsorted(String s) {
+		
+		String name(String s){
+			return s;
+		}
+		
+		List <Product> plist1 = new ArrayList <>();
+		try {
+			
+			ResultSet rs = showInsorted.executeQuery();
+			while(rs.next()) {
+				plist1.add(new Product (rs.getInt(1), rs.getString(2), rs.getDouble(3)));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return plist1;
+	}
+
+	
+
+}

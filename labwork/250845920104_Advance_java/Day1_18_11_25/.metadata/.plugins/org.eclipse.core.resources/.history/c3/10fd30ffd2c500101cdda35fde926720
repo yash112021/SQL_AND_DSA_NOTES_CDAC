@@ -1,0 +1,76 @@
+package com.demo.service;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Scanner;
+
+import com.demo.beans.Product;
+import com.demo.dao.ProductDao;
+import com.demo.dao.ProductDaoImpl;
+
+public class ProductServiceImpl implements ProductService {
+
+	private ProductDao pdao ;
+	
+	public ProductServiceImpl() {
+		pdao = new  ProductDaoImpl();
+	}
+	@Override
+	public boolean addProduct() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the product id");
+		int id = sc.nextInt();
+		
+		System.out.println("Enter the product description ");
+		String desc = sc.next();
+		
+		System.out.println("Enter the price of product");
+		double price = sc.nextDouble();
+		
+		  
+	    Product p = new Product(id,desc,price);
+	    return pdao.save(p);
+//		
+//		System.out.println("Enter the product ");
+//		String name = sc.next();
+		
+//		System.out.println("Enter quantity");
+//		int qty = sc.nextInt();
+		
+	
+//		
+//		System.out.println("Enter the manufacturing date(dd/MM/yyyy");
+//		String date = sc.next();
+//	    LocalDate ldt = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+	  
+	    
+		
+	}
+	@Override
+	public boolean deleteById(int pid) {
+			
+		return pdao.removeById(pid);
+	}
+	
+	// modify by Id -->
+	@Override
+	public boolean modifyById(int a, String pname, double price) {
+		return pdao.updateByid(a,pname,price);
+	}
+	
+	// find by id 
+	@Override
+	public Product findbyId(int id) {
+		
+		return pdao.findbyIdproduct(id);
+	}
+	
+	//display all product
+	@Override
+	public List<Product> displayAllProduct() {
+		
+		return pdao.getAllproduct();
+	}
+
+}

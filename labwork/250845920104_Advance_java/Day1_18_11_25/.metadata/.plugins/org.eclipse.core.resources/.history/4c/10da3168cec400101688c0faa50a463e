@@ -1,0 +1,76 @@
+package com.demo.test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class CreateStatement {
+	public static void main(String args[]) {
+		Scanner sc=new Scanner(System.in);
+		Connection conn=null;
+	try {	
+		// making the jdbc connection by using the the type 4  driver
+		
+		// Step1 Register the driver and the load the driver
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+		
+		// step2 getting the connection
+		String url="jdbc:mysql://192.168.10.117:3306/dac104?useSSL=false";
+		conn=DriverManager.getConnection(url,"dac104","welcome");
+		
+		//nowchecking whether the connection take place or not
+		if(conn!=null) {
+			System.out.println("Conection done Succesfully .....");
+		}else {
+			System.out.println("Connection Not done..**");
+		}
+		
+		// step3 Statement 
+		// in these we are using the Create Statement
+		Statement st=conn.createStatement();
+		
+		// Step4 resultant set
+		ResultSet rs=st.executeQuery("Select * from emp");
+		
+		// now using the while loop to print it till the the end
+		
+		while(rs.next()) {
+			System.out.println("**************************************************************");
+			System.out.println("Employee No --> "+rs.getInt(1));
+			System.out.println("Employee Name --> "+rs.getString(2));
+			System.out.println("Employee job --> "+rs.getString(4));
+			
+			System.out.println("**************************************************************");
+			
+		}
+	
+		// now inserting the data  into the dept table
+		System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+		System.out.println("Entering the data into the dept Table");
+		System.out.println("Enter the Department NO -->");
+		int a=sc.nextInt();
+		System.out.println("Enter the Department Name -->");
+		String dname=sc.next();
+		System.out.println("Enter the location -->");
+		String loc=sc.next();
+		System.out.println("Enter the password-->");
+		String pwd=sc.next();
+		System.out.println("Enter the date -->");
+		String cdate=sc.next();
+		
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+		e.printStackTrace();
+	}finally {
+		try {
+			conn.close();
+		}catch(SQLException e){
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	}
+}

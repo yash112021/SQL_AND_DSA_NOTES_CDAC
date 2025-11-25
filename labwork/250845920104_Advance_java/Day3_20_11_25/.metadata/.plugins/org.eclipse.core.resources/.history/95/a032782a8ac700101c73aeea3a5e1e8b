@@ -1,0 +1,25 @@
+package com.demo.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ValidateUser extends HttpServlet {
+	
+	// using the do get Method
+	public void doget(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		res.setContentType("Text/Html");
+		PrintWriter out=res.getWriter();
+		
+		// now reading the input and then sending it forward to the dow layer
+		String name=req.getParameter("empname");
+		String p
+		
+		
+		
+	}
+	
+}

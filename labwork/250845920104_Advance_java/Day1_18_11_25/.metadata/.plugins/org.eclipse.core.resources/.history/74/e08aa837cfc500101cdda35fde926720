@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import com.demo.beans.Product;
+
+public interface ProductDao {
+
+	boolean save(Product p);
+
+	boolean removeById(int pid);
+
+	boolean updateByid(int a, String pname, double price);
+
+	Product findbyId();
+
+	Product findbyIdproduct(int id);
+
+}

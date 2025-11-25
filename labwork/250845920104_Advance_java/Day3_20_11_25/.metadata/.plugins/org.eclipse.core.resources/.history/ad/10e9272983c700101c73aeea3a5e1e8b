@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+ Numbers of units : <input type="number" name="units" id="units">
+ <button type="submit" name="btn" id="btn">Calculate bill</button>
+</body>
+</html>

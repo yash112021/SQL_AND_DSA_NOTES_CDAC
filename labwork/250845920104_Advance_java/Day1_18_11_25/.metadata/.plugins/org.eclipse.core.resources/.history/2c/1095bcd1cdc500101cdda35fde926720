@@ -1,0 +1,11 @@
+package com.demo.service;
+
+public interface ProductService {
+
+	boolean addProduct();
+
+	boolean deleteById(int pid);
+
+	boolean modifyById(int a, String pname, double price);
+
+}

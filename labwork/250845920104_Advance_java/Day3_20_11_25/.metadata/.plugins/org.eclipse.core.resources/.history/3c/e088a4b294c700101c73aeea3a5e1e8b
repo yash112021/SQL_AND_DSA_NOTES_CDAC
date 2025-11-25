@@ -1,0 +1,43 @@
+package com.demo.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.demo.beans.Emplyee;
+import com.demo.service.LoginService;
+import com.demo.service.LoginServiceImpl;
+
+public class ValidateUser extends HttpServlet {
+	LoginService eser ;
+	
+	// using the do get Method
+	public void doget(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		res.setContentType("Text/Html");
+		PrintWriter out=res.getWriter();
+		
+		// now reading the input and then sending it forward to the dow layer
+		String name=req.getParameter("empname");
+		String pass=req.getParameter("passwd");
+		
+		//Creating the oject of the service
+		eser=new LoginServiceImpl();
+		Emplyee emp=eser.validateUser(name,pass);
+		if(emp!=null){
+			out.println("<h1> Valid Creditanls </h1>");
+		}else {
+			out.println("<h1> INValid Creditanls </h1>");
+			RequestDispatcher rd=req.getRequestDispatcher("login.html") ;
+			rd.include(req, res);
+		}
+		
+		
+		
+		
+	}
+	
+}

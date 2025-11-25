@@ -1,0 +1,26 @@
+package com.demo.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ServletInterest extends HttpServlet{
+	// using the dopost Method 
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException{
+		// now specfiying the content 
+		res.setContentType("text/html");
+		PrintWriter out=res.getWriter(); // due to this we need add the throws 
+		
+		double p=Double.parseDouble(req.getParameter("princi"));
+		int year=Integer.parseInt(req.getParameter("year"));
+		float rate=Float.parseFloat(req.getParameter("rate"));
+		
+		double  si=(p*year*rate)/100;
+		
+		// now displaying the output 
+		out.println("<h1> The simple Interrest is --> "+si+"</h1>");
+	}
+}

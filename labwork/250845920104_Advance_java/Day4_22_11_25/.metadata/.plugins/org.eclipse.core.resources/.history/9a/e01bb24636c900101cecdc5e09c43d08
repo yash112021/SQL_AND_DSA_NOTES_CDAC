@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action=loginpage method="get">
+		username : <input type="text" name="usrname" id="usrname"><br><br>
+		password :<input type="password" name="pass" id="pass"><br><br>
+		<button name="login" id="login">Submit</button>
+		
+	</form>
+	<!-- now creating two anchor link -->
+	<a href="rgst.html">Register ? New User</a><br><br>
+	<a href="forgot.hmtl">forgot Password </a>
+</body>
+</html>
