@@ -1,0 +1,70 @@
+package com.demo.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.demo.beans.User;
+import com.demo.service.ProductService;
+import com.demo.service.ProductServiceImpl;
+
+/**
+ * Servlet implementation class CategoryServle-t
+ */
+@WebServlet({ "/CategoryServlet", "/cartegory" })
+public class CategoryServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("Text/Html");
+		PrintWriter out=response.getWriter();
+		
+		//check user exist in session 
+		HttpSession session = request.getSession();
+		User u =  (User)session.getAttribute("nm");
+		session.setAttribute("nm", u); //extra part
+		if(u!=null) {   // && u.getRole().equals("user"
+			//creating the object of the Product Service
+			ProductService pserv=new ProductServiceImpl();
+			// now wer wiil require the array of Integer  list which will store the No unqiue items 
+			List<Integer> lst= pserv.findCategory();
+			// now to the user we are going to show the list to the user
+			out.println("you will get the list of the Items");
+			//now sending the selection list to the user from  here in the perform response
+			out.println("<form action='ProductServlet'> <select name='cartegory'>");
+			// by using the for loop we are going to set the  the options
+			for(int i:lst) {
+				out.println("<option value='"+i+"'>"+i+"</option>");
+			}
+			out.println("</select>");
+			// now reqiring the two buttons 
+			out.println("<button name='btn' value='show' id='btn' >SUBMIT</button>");
+			out.println("<button name='btn' value='order' id='btn' >PLACORDER</button>");
+			
+			out.println("</from>");
+			
+			
+			
+			
+		}else {
+			out.println("<h1>Authorize access <h1>");
+			RequestDispatcher a= request.getRequestDispatcher("index.html");
+			a.include(request, response);
+			
+		}
+			
+		
+	}
+
+}

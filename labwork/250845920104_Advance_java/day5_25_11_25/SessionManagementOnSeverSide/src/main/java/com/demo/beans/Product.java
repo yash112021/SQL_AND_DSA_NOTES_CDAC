@@ -1,0 +1,92 @@
+package com.demo.beans;
+
+public class Product {
+
+//	 PRODID    | DESCRIP                 | PRICE | qty  | PayAmount |
+	private int prdId;
+	private String desc;
+	private int price;
+	private int qty;
+	private float payamoutn;
+	
+	// default constructor
+	public Product() {
+		super();
+	}
+
+	
+	// paramterised constructor
+	public Product(int prdId, String desc, int price, int qty, float payamoutn) {
+		super();
+		this.prdId = prdId;
+		this.desc = desc;
+		this.price = price;
+		this.qty = qty;
+		this.payamoutn = payamoutn;
+	}
+	
+	// gettera and setters
+
+	public int getPrdId() {
+		return prdId;
+	}
+
+
+	public void setPrdId(int prdId) {
+		this.prdId = prdId;
+	}
+
+
+	public String getDesc() {
+		return desc;
+	}
+
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+
+	public int getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+
+	public int getQty() {
+		return qty;
+	}
+
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+
+	public float getPayamoutn() {
+		return payamoutn;
+	}
+
+
+	public void setPayamoutn(float payamoutn) {
+		this.payamoutn = payamoutn;
+	}
+
+	
+	
+	// toString
+	@Override
+	public String toString() {
+		return "Product [prdId=" + prdId + ", desc=" + desc + ", price=" + price + ", qty=" + qty + ", payamoutn="
+				+ payamoutn + "]";
+	}
+	
+	
+	
+	
+	 
+}

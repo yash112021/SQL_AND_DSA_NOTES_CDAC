@@ -57,6 +57,11 @@ public class User {
 	public String toString() {
 		return "User [name=" + name + ", password=" + password + ", email=" + email + "]";
 	}
+
+	public Object getRole() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

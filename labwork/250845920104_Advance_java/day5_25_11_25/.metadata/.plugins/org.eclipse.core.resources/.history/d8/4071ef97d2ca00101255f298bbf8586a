@@ -1,0 +1,24 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+public class ProductDaoImpl implements ProductDao{
+
+	// creating the connection
+	static Connection conn;
+	static {
+		conn=DBUtil.getMyConnection();
+	}
+	
+	
+	@Override
+	public List<Integer> findallCategory() {
+		
+		//  Prepared Statement
+		PreparedStatement pst=conn.prepareStatement("select product PRODID from product");
+		
+	}
+
+}

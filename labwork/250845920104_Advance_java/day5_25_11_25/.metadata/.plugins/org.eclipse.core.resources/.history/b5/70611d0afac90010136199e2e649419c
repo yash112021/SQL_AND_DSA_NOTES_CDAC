@@ -1,0 +1,13 @@
+package com.demo.dao;
+
+import java.util.List;
+
+public class ProductDaoImpl implements ProductDao{
+
+	@Override
+	public List<Integer> findallCategory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

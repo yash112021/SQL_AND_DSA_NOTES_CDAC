@@ -1,0 +1,32 @@
+package com.demo.beans;
+
+public class Product {
+
+//	 PRODID    | DESCRIP                 | PRICE | qty  | PayAmount |
+	private int prdId;
+	private String desc;
+	private int price;
+	private int qty;
+	private float payamoutn;
+	
+	// default constructor
+	public Product() {
+		super();
+	}
+
+	
+	// paramterised constructor
+	public Product(int prdId, String desc, int price, int qty, float payamoutn) {
+		super();
+		this.prdId = prdId;
+		this.desc = desc;
+		this.price = price;
+		this.qty = qty;
+		this.payamoutn = payamoutn;
+	}
+	
+	
+	
+	
+	 
+}

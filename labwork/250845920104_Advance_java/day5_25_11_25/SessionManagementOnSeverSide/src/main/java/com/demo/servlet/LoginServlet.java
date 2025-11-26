@@ -44,11 +44,13 @@ public class LoginServlet extends HttpServlet {
 			HttpSession sess= request.getSession();
 			sess.setAttribute("nm", usr);
 			out.println("<h1><i>valid credential</i></h2>");
-			RequestDispatcher rd = request.getRequestDispatcher("index.html");
-			rd.include(request, res);
+			RequestDispatcher rd = request.getRequestDispatcher("CategoryServlet");
+			rd.forward(request, res);
 		}
 		else {
 			out.println("<h1>Invalid credential</h2>");
+//			res.getWriter().write("<h1>hwl yash</h1>");
+//			res.getWriter().write("<h1>hwl pati</h1>");
 			RequestDispatcher rd = request.getRequestDispatcher("index.html");
 			rd.include(request, res);
 		}
