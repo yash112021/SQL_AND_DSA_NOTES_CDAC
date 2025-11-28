@@ -1,0 +1,9 @@
+package com.demo.beans;
+
+public class Product {
+	private int productId;
+	private String desc;
+	private int price;
+	private int qty;
+	private float payamount;
+}

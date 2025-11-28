@@ -1,0 +1,63 @@
+package com.demo.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.demo.beans.User;
+import com.demo.service.LoginService;
+import com.demo.service.LoginServiceImpl;
+
+/**
+ * Servlet implementation class LoginServlet
+ */
+@WebServlet({ "/LoginServlet", "/login" })
+public class LoginServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		res.setContentType("text/html"); // setting the out  put content
+		PrintWriter out=res.getWriter(); // creating the object what to write
+		
+		// reading the input from the form
+		String name=request.getParameter("nm");
+		String password=request.getParameter("pss");
+		
+		// now creating the object of the service
+		LoginService eser=new LoginServiceImpl();	
+		// now we need perfom the validation on the user and then the user will enter into next servlet
+		User usr=eser.finduser(new User(name,password));
+		
+		if(usr != null) {
+			//now we have to store user in session
+			HttpSession sess= request.getSession();
+			sess.setAttribute("nm", usr);
+			out.println("<h1><i>valid credential</i></h2>");
+			RequestDispatcher rd = request.getRequestDispatcher("CategoryServlet");
+			rd.forward(request, res);
+		}
+		else {
+			out.println("<h1>Invalid credential</h2>");
+//			res.getWriter().write("<h1>hwl yash</h1>");
+//			res.getWriter().write("<h1>hwl pati</h1>");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			rd.include(request, res);
+		}
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>USING JSP EXPRESSION</h1>
+Number 1: <%=session.getAttribute("num1") %>
+Number 1: <%=request.getParameter("num2") %>
+number 2: <%=request.getParameter("n2") %>
+Message: <%=request.getParameter("msg1") %>
+user: <%=session.getAttribute("usr") %>
+
+
+<hr>
+
+<h1>USING EL LANGUAGE</h1>
+Number1 = ${param.num1 }
+Number2= ${param.num2 }
+mssg = ${param.msg1}
+User: ${param.usr }
+</body>
+</html>

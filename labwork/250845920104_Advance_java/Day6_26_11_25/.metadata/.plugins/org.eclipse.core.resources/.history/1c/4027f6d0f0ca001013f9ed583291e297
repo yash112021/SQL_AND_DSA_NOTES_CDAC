@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@page import="java.util.Date" %>
+<%@include file="MyHeader.html" %>
+
+<%
+String btn = request.getParameter("btn");
+int num1 = Integer.parseInt(request.getParameter("num1"));
+Date d = new Date();
+
+if(btn.equals("add")){
+	int num2 = Integer.parseInt(request.getParameter("num2"));
+	int res = num1 + num2;
+}
+%>
+<h2>Addition : <%=res %></h2>
+
+
+<%@include file="MyFooter.html" %>
+</body>
+</html>

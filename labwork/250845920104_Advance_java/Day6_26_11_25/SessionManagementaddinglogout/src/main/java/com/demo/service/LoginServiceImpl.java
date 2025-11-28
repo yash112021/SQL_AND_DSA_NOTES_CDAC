@@ -1,0 +1,25 @@
+package com.demo.service;
+
+import com.demo.beans.User;
+import com.demo.dao.LoginDao;
+import com.demo.dao.LoginDaoImpl;
+
+public class LoginServiceImpl implements LoginService{
+
+	// creating the object of the dao 
+	LoginDao edao;
+	
+	
+	public LoginServiceImpl() {
+//		super();
+		this.edao = new LoginDaoImpl();
+	}
+
+
+	@Override
+	public User finduser(User user) {
+		
+		return edao.validateUsr(user);
+	}
+
+}

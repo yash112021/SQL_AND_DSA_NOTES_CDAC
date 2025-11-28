@@ -1,0 +1,23 @@
+INDEX VERSION 1.132
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\653812719.index
+\customTags\src\main\java
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3147168304.index
+\Jspcoretags\src\main\java
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\451148617.index
+\JSPDemo1\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1313511198.index
+\JSPUseBeanDemo\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2911470800.index
+\JSTLDemo\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\746226008.index
+\CustomTagDemo\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1070665711.index
+\JSPProject2\src\main\java
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1361806822.index
+\JSTL_LIBRARY\src\main\java
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2013729781.index
+\ProductCartJSPServlet\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2675682256.index
+\JSTL_LIBRARY\src\main\java
+C:\Users\IET\Desktop\250845920104_Advance_java\Day7_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\239993610.index
+\JSPActionDemo2\src

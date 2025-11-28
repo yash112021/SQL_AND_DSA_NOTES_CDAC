@@ -1,0 +1,37 @@
+package com.demo.service;
+
+import java.util.List;
+
+import com.demo.beans.Product;
+import com.demo.dao.ProductDao;
+import com.demo.dao.ProductDaoImpl;
+
+public class ProductServiceImpl implements ProductService {
+
+	// creating the object of the product dao
+	ProductDao edao;
+	
+	
+	// constructor
+	public ProductServiceImpl( ) {
+//		super();
+		this.edao = new ProductDaoImpl();
+	}
+
+
+
+	@Override
+	public List<Integer> findCategory() {
+		
+		return edao.findallCategory();
+	}
+
+
+
+	@Override
+	public List<Product> getByCid(int cid) {
+		// TODO Auto-generated method stub
+		return edao.findByCid(cid);
+	}
+
+}

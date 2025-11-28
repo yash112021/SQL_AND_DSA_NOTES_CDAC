@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+
+String firstname= "Yash";
+String lastname= "Patil";
+%>
+
+<h1>now we are going to make our own custom tag</h1>
+<hello:myhellotag fname="<%=firstname %>" lname="<%=lastname %>"></hello:myhellotag>
+<hello:calculate num1="${param.num1 }" num2="${param.num 2}"></hello:calculate>
+</body>
+</html>

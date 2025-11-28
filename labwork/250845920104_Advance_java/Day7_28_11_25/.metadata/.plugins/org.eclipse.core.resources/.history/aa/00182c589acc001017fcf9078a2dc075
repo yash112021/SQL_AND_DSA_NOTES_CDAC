@@ -1,0 +1,8 @@
+package com.demo.customtag;
+
+import javax.servlet.jsp.tagext.TagSupport;
+
+public class HandleCalculateTag extends TagSupport{
+
+	private int num1, num2;
+}

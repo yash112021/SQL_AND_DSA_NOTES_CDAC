@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- set the variable by using the jstl library -->
+	<c:set var="ia" value="9"></c:set>
+	<c:out value="${ia}"></c:out>
+	
+	<!-- doing the comparsion -->
+	<c:if test="${ia>5}">
+		i is greater
+	</c:if>
+	
+	<!--for loop -->
+	<c:forEach var="j" begin="1" end="10" step="1">
+		<h3></h3>
+	</c:forEach>
+	
+	
+</body>
+</html>

@@ -1,0 +1,58 @@
+package com.demo.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.demo.beans.User;
+
+
+
+
+@WebServlet({ "/AddToCart", "/addcart*" })
+public class AddToCart extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		HttpSession sess = request.getSession();
+		User user = (User) sess.getAttribute("nm");
+//		User u =  (User)session.getAttribute("nm");
+		if(user!= null) {
+			List<String> list = (List<String>) sess.getAttribute("list");
+			
+			if(list == null) {
+				list = new ArrayList<>();
+			}
+			String [] parr= request.getParameterValues("productname");
+			for(String str:parr) {
+				list.add(str);
+				out.println(str);
+			}
+			out.println("Product  added to the cart--");
+			
+			sess.setAttribute("list", list);
+			RequestDispatcher rd = request.getRequestDispatcher("cartegory");
+			rd.include(request, response);
+		}
+		else {
+			out.println("Unauthorized user");
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+			rd.forward(request, response);
+		}
+		
+	}
+
+}

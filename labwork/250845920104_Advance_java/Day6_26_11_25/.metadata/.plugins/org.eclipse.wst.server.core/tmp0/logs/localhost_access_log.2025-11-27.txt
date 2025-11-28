@@ -1,0 +1,13 @@
+127.0.0.1 - - [27/Nov/2025:11:26:21 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:26:21 -0500] "GET /SessionManagementaddinglogout/ HTTP/1.1" 200 473
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:26:25 -0500] "GET /SessionManagementaddinglogout/login?nm=GITA&pss=sales%402017&login= HTTP/1.1" 200 1036
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:26:27 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=100890&btn=show HTTP/1.1" 200 492
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:26:31 -0500] "GET /SessionManagementaddinglogout/login?nm=GITA&pss=sales%402017&login= HTTP/1.1" 200 1036
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:26:31 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=106&btn=order HTTP/1.1" 200 492
+127.0.0.1 - - [27/Nov/2025:11:28:15 -0500] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:19 -0500] "GET /SessionManagementaddinglogout/login?nm=GITA&pss=sales%402017&login= HTTP/1.1" 200 1036
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:20 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=106&btn=show HTTP/1.1" 200 269
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:28 -0500] "GET /SessionManagementaddinglogout/addcart*?productname=keyboard HTTP/1.1" 200 1076
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:29 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=106&btn=order HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:39 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=106&btn=order HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [27/Nov/2025:11:28:42 -0500] "GET /SessionManagementaddinglogout/ProductServlet?cartegory=106&btn=order HTTP/1.1" 200 -

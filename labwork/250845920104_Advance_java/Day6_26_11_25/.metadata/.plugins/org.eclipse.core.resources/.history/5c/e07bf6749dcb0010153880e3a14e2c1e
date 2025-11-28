@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <!-- the below one previous method we are using till now -->
+	<!-- int pid = Integer.parseInt(request.getParameter("pid"));
+    String pdesc = request.getParameter("pdesc");
+    int qty = Integer.parseInt(request.getParameter("qty"));
+    int price = Integer.parseInteger(request.getParameter("price"));
+    float totalamount = float.parseFloat(request.getParameter("tamt")); -->
+
+ <!--  <jsp:useBean id="prod" class="com.demo.beans.Product"></jsp:useBean> -->
+     <!--  <jsp:setProperty property="*" name="prod"></jsp:setProperty>
+       we can set all the parametr byusing the star*
+ -->
+
+
+    <jsp:setProperty name="prod" property="pid" value='<%=request.getParameter("pid")%>'></jsp:setProperty>
+    <jsp:setProperty name="prod" property="pdesc" value='<%=request.getParameter("pdesc")%>'></jsp:setProperty>
+    <jsp:setProperty name="prod" property="qty" value='<%=request.getParameter("qty")%>'></jsp:setProperty>
+    <jsp:setProperty name="prod" property="price" value='<%=request.getProperty("price")%>'></jsp:setProperty>
+    <jsp:setProperty name="prod" property="pamt" value='<%=request.getParameter("pamt")%>'></jsp:setProperty>
+
+    <h1>Product data</h1>
+    Product Id: <jsp:getProperty property="pid" name="prod"/>
+    Product desc: <jsp:getProperty property="pdesc" name="prod"/>
+    Product qty: <jsp:getPropertry property="qty" name="prod"/>
+    Product price:<jsp:getProperty property="price" name="prod"/>
+    Product totalamt: <jsp:getProperty property="pamt" name="prod"/>
+</body>
+</html>

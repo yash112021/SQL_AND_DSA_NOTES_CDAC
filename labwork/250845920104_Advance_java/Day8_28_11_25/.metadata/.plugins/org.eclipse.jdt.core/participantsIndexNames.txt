@@ -1,0 +1,7 @@
+INDEX VERSION 1.132
+C:\Users\IET\Desktop\250845920104_Advance_java\Day8_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\534091535.index
+\ProductCartJSPJSTL\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day8_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2013729781.index
+\ProductCartJSPServlet\src
+C:\Users\IET\Desktop\250845920104_Advance_java\Day8_28_11_25\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\304125840.index
+\JSPProductCartServlet\src\main\java

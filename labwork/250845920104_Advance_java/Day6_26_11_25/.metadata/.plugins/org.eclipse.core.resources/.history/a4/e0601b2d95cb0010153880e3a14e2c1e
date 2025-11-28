@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%@page import="java.util.Date" %>
+<%@include file="MyHeader.html" %>
+<!-- html  comment-->
+<%--Jsp Comment will will not visible --%>
+
+<%! public int factorial (int n){
+	int f=1;
+	for(int i=1;i<=n;i++){
+		f=f*i;
+	}
+	return f;
+}%>
+
+
+<%
+String btn = request.getParameter("btn");
+int num1 = Integer.parseInt(request.getParameter("num1"));
+Date d = new Date();
+
+if(btn.equals("Add")){
+	int num2 = Integer.parseInt(request.getParameter("num2"));
+	int res = num1 + num2;%>
+	<h2>Addition : <%=res %></h2><%
+}else{
+	int fact=factorial(num1);
+}
+%>
+
+
+
+<%@include file="MyFooter.html" %>
+</body>
+</html>

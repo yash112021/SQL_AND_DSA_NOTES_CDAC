@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</stitle>
+</head>
+<body>
+<%@include file="MyHeader.html" %>
+<br><br>
+<form action="result.jsp">
+
+Num1: <input type="number" id="num1" name="num1"/></br>
+Num2: <input type="number" id="num2" name="num2"/></br>
+<button type="submit" name="btn" id="btn" value="Add">Add</button>
+<button type="submit" name="btn" id="btn" value="fact">factorial</button>
+</form>
+<%@include file="MyFooter.html" %>
+</body>
+</html>

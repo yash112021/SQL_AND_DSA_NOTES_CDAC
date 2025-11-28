@@ -1,0 +1,6 @@
+package com.demo.beans;
+
+public class User {
+	private String usr;
+	private String pass;
+}
