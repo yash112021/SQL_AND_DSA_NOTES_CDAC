@@ -20,7 +20,7 @@ public class MergeSortAlgorithm {
 		}
 		int i=0;
 		int j=0;
-		int k=start;
+		int k=s;
 		//copy smaller value either from leftarray or rightarray into arr
 		while(i<n1 && j<n2) {
 			if(leftarray[i]<rightarray[j]) {

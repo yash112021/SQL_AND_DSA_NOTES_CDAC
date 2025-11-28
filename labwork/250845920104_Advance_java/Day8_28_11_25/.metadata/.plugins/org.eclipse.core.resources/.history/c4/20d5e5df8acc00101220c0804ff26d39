@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"  import="java.util.*,com.demo.beans.User"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1><i>now we are going to show the product table to the user</i></h1>
+    <table>
+     <%
+     User usr=(User) request.getAttribute("user");
+     %>
+    
+        <tr>
+            <th>Empno</th>
+            <th>Ename</th>
+            <th>pwd</th>
+            <th>job</th>
+            <th>role</th>
+        </tr>
+
+        <tr>
+            <td><%= %>></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

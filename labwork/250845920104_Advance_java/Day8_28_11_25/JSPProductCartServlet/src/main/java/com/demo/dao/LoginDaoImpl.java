@@ -1,5 +1,47 @@
 package com.demo.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.demo.beans.User;
+
 public class LoginDaoImpl implements LoginDao{
+	// connection and the preapred statement;
+	static Connection conn=null;
+	static PreparedStatement finuser;
+	
+	static {
+		conn=DBUtil.getMyConnection();
+		try {
+			finuser=conn.prepareStatement("select * from valuser where ENAME=? and Pwd=? ");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	@Override
+	public User valiuser(String user, String pass) {
+		try {
+			finuser.setString(1,user);
+			finuser.setString(2,pass);
+			
+			// loading the result set
+			ResultSet rs=finuser.executeQuery();
+			if(rs.next()) {
+				User usr=new User(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+				return usr;
+				
+			}
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 
 }

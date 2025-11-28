@@ -33,8 +33,8 @@
 -->
 
   <user password="" roles="manager-gui" username="admin"/>
-  <!-- <user username="robot" password="<must-be-changed>" roles="manager-script"/> -->
-
+  <!--<user username="robot" password="<must-be-changed>" roles="manager-script"/>
+-->
 <!--
   The sample user and role entries below are intended for use with the
   examples web application. They are wrapped in a comment and thus are ignored

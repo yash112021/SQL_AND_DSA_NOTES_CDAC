@@ -14,6 +14,7 @@ public class QuickSortAlgorithm {
 			while(j>start && arr[j]>arr[pivot]) {
 				j--;
 			}
+			
 			if(i<j) {
 				int temp=arr[i];
 				arr[i]=arr[j];

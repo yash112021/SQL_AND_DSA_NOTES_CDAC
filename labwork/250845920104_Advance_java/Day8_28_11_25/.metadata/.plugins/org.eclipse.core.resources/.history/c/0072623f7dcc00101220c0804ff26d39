@@ -1,0 +1,23 @@
+package com.demo.dao;
+
+import java.sql.Connection;
+
+public class DBUtil {
+
+	// now here we are going to  make the connection by using the single patter
+	public static Connection conn=null;
+	
+	// method for getting the connection
+	public static Connection getMyConnection() {
+		if(conn==null) {
+			conn=DriverManager
+		}
+		return null;
+	}
+	
+	
+	// closing the fuctino
+	public void closeConnection() {
+		conn.close();
+	}
+}

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+    <entry loc="C:\Users\YASH PATIL\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412" stamp="1759945273818"/>
+    <entry loc="C:\Users\YASH PATIL\Downloads\eclipse-jee-2025-09-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.8.v20250724-1412\jre" stamp="1759945276294"/>
+    <entry loc="C:\Program Files\Java\jdk-24" stamp="1746355208594"/>
+    <entry loc="C:\Program Files\Amazon Corretto\jdk11.0.24_8" stamp="1722677025859"/>
+    <entry loc="C:\Program Files\Java\jdk-21" stamp="1758358300876"/>
     <entry loc="C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729" stamp="1761772652748"/>
     <entry loc="C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\jre" stamp="1761772667975"/>
 </dirs>

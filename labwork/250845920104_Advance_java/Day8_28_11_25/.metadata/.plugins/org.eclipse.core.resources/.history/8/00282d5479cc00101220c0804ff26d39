@@ -1,0 +1,14 @@
+package com.demo.service;
+
+import com.demo.dao.LoginDao;
+import com.demo.dao.LoginDaoImpl;
+
+public class LoginServiceImpl implements LoginService{
+		// making object of the Dao
+	LoginDao edao;
+
+		public LoginServiceImpl() {
+			this.edao = new LoginDaoImpl();
+		}
+	
+}

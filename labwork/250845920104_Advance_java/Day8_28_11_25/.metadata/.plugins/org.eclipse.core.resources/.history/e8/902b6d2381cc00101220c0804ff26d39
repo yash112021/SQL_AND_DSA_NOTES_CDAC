@@ -1,0 +1,52 @@
+package com.demo.beans;
+
+public class User {
+	private int empid;
+	private String usr;
+	private String pass;
+	private String job;
+	private String role;
+	
+	
+	// default constructor
+	public User() {
+		super();
+	}
+	
+//	Empno | Ename   | pwd        | job     | role 
+	// paramterised constructor 
+	public User(String usr, String pass) {
+		super();
+		this.usr = usr;
+		this.pass = pass;
+	}
+
+	
+	
+	
+	// toString Method 
+	@Override
+	public String toString() {
+		return "User [usr=" + usr + ", pass=" + pass + "]";
+	}
+
+	// getters and setters
+	public String getUsr() {
+		return usr;
+	}
+
+
+	public void setUsr(String usr) {
+		this.usr = usr;
+	}
+
+
+	public String getPass() {
+		return pass;
+	}
+
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+}

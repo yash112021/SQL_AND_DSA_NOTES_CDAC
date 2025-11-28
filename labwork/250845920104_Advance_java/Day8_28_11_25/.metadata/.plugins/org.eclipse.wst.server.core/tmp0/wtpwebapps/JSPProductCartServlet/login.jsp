@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="validateUser" method="get">
+	<form action="yash" method="get">
         <label for="username">USERNAME:</label>
         <input type="text" name="username" id="username" placeholder="Enter your username">
         <br><br>
@@ -20,6 +20,5 @@
 
     </form>
 	
-
 </body>
 </html>
