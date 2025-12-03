@@ -1,0 +1,40 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+import com.demo.service.ProjectService;
+import com.demo.service.ProjectServiceImpl;
+
+public class TestEmpProjCrud {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		ProjectService pservice = new  ProjectServiceImpl();
+		int choice =0;
+		do {
+			
+			
+			System.out.println("1.Add Project");
+			System.out.println("2.Add Employees");
+			System.out.println("3.Show all employeest");
+			System.out.println("4.delete employee");
+			System.out.println("5.update employe sal");
+			System.out.println("6.exit\n choice");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			case 1 -> {
+				pservice
+			}
+			case 2-> {
+				
+			}
+			
+			}
+			
+		}while(choice !=6);
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class Emplyee {
+	// data Members id, name ,date,sal
+	private int eid;
+	private String name;
+	private LocalDate date;
+	private double sal;
+}

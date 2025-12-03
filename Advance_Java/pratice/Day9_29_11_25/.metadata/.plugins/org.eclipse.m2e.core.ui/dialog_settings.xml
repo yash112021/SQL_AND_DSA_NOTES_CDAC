@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\IET\Desktop\maven\Day9_29_11_25\UnidirectionalOneByOne\src\main\java\com\demo\Test\TestUnidirOnebyOne.java"/>
+			<item value="C:\Users\IET\Documents\advjava\Day 9\OneToOneUnidirectional\src\main\java\com\demo\test\TestMyuserGetData.java"/>
+			<item value="C:\Users\IET\Documents\advjava\Day 9\EmbeddableDemo"/>
+			<item value="C:\Users\IET\Documents\advjava\Day 9\MyFirstAnnotiondemo\src\main\java\com\demo\beans"/>
+			<item value="C:\Users\IET\Desktop\maven\Day9_29_11_25\MyFirstHibernateProject\src\main\resources\User.hbm.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.demo"/>
+		</list>
+		<list key="name">
+			<item value="OneToOneBidirectional"/>
+			<item value="UnidirectionalOneByOne"/>
+			<item value="EmbedablebyAnnotations"/>
+			<item value="AnnotationsProject"/>
+			<item value="firstHibernatePrj"/>
+		</list>
+		<list key="artifactId">
+			<item value="OneToOneBidirectional"/>
+			<item value="UnidirectionalOneByOne"/>
+			<item value="EmbedablebyAnnotations"/>
+			<item value="AnnotationsProject"/>
+			<item value="firstHibernatePrj"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

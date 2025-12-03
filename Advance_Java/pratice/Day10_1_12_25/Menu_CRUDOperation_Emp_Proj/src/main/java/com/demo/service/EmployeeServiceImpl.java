@@ -1,0 +1,97 @@
+package com.demo.service;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import com.demo.beans.Employee;
+import com.demo.beans.Project;
+import com.demo.dao.EmployeeDao;
+import com.demo.dao.EmployeeDaoImpl;
+import com.demo.dao.ProjectDao;
+import com.demo.dao.ProjectDaoImpl;
+
+public class EmployeeServiceImpl implements EmployeeService{
+	private EmployeeDao edao;
+	private ProjectDao pdao;
+	
+	//making constructor of the emloyeeserviceimpl 
+	public EmployeeServiceImpl() {
+		super();
+		this.edao = new EmployeeDaoImpl();
+		this.pdao =new  ProjectDaoImpl();
+	}
+
+
+	@Override
+	public boolean addEmployee() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the employee id");
+		int eid = sc.nextInt();
+		System.out.println("Enter name of employee");
+		String ename = sc.next();
+		System.out.println("Enter the hiredate(dd/mm/yyyy");
+		String dt = sc.next();
+		LocalDate ldt = LocalDate.parse(dt, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		System.out.println("Enter salary of employee");
+		double sal = sc.nextDouble();
+		System.out.println("Enter the project id");
+		String pid = sc.next();
+		String parr[]= pid.split(",");
+		Set<Project> pset = pdao.findById(parr);
+		Employee e = new Employee(eid,ename,ldt,sal,pset);
+		
+		return edao.save(e);
+	}
+
+
+	//finding all the employees
+	@Override
+	public List<Employee> getAllEmployee() {
+				
+		return edao.findAllEmp();
+	}
+
+	//deleting the employee
+	@Override
+	public boolean deleteById(int id) {
+		
+		return edao.removeById(id);
+	}
+
+	//updating the employuee
+	@Override
+	public boolean updateSalNameById(int eid, String ename, double sal) {
+		
+		return edao.modifyById(eid,ename,sal);
+	}
+
+	//assigning the extra project to the employee
+	@Override
+	public boolean addExtraProjToEmply(int eid, int pid) {
+		Employee e = edao.findById(eid);
+		Project p = pdao.findByPrjId(pid);
+		//now cecking if the project and employee are exists are not if both are exists then only we can assign the project 
+		if(e!=null && p!=null) {
+			return edao.addProjectToEmployee(e,p);
+		}
+		return false;
+	}
+
+	// sorting the Emplyee by the Sal
+	@Override
+	public List<Employee> sortEmpBySal() {
+		
+		return edao.sortBySal();
+	}
+
+	//closing the Resources
+	@Override
+	public void close() {
+		edao.closeRes();
+		
+	}
+
+}

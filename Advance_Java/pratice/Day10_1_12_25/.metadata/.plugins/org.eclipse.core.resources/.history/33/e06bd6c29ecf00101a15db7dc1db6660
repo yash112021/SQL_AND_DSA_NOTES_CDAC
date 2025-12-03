@@ -1,0 +1,89 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Emphiber")
+public class Emplyee {
+	// data Members id, name ,date,sal
+	@Id
+	private int eid;
+	private String name;
+	private LocalDate date;
+	private double sal;
+	@ManyToOne(fetch=FetchType.LAZY)
+	private Department dept;
+	
+	// defalut constructor
+	public Emplyee() {
+		super();
+	}
+
+	// parmatersied constructor 
+	public Emplyee(int eid, String name, LocalDate date, double sal, Department dept) {
+		super();
+		this.eid = eid;
+		this.name = name;
+		this.date = date;
+		this.sal = sal;
+		this.dept = dept;
+	}
+
+	
+	// getters and setters
+	public int getEid() {
+		return eid;
+	}
+
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+	public double getSal() {
+		return sal;
+	}
+
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+
+	@Override
+	public String toString() {
+		return "Emplyee [eid=" + eid + ", name=" + name + ", date=" + date + ", sal=" + sal +"]";
+	}
+	
+	
+	// to String Method
+	
+	
+}

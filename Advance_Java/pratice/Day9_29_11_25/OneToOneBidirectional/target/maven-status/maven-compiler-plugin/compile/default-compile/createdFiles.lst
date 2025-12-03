@@ -1,0 +1,4 @@
+com\demo\beans\Address.class
+com\demo\beans\User.class
+com\demo\Test\TestBidirectionalGetData.class
+com\demo\Test\TestBidirOnebyOne.class

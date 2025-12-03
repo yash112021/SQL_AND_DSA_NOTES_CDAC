@@ -1,0 +1,12 @@
+package com.demo.beans;
+
+public class User {
+	// now here we are creating the class user with the help of the hibenate orm it will send the data to the valuser table
+//	EmpNo | Ename   | job     | user name   | pwd        | role
+	private int empno;
+	private String Ename;
+	private String job;
+	private String usrname;
+	private String pwd;
+	private String role;  // amdmin /staff
+}

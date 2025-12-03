@@ -1,0 +1,27 @@
+package com.demo.dao;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class HibernateDBUtil {
+		// this is for making the connection only once
+	static SessionFactory sf=null;
+	
+	// fuction for making the connection
+	public static SessionFactory  getConnection(){
+		if(sf==null) {
+			// then make the connnection 
+			sf=new Configuration().configure().buildSessionFactory();
+			// then you need to return the obhject
+			return sf;
+			
+		}
+		return null;
+	}
+	
+	// fucntion for closing the fucntion
+	public static void closeConnection() {
+		sf.close();
+	}
+	
+}

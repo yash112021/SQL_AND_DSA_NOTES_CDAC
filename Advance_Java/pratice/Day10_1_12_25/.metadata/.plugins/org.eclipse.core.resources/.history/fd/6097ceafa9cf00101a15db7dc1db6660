@@ -1,0 +1,33 @@
+package com.demo.test;
+
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import com.demo.beans.Emplyee;
+
+public class TestManyToManyBiDir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session sess = sf.openSession();
+		Transaction tr = sess.beginTransaction();
+		Emplyee e1 = new Emplyee( 1,"Jyoti",LocalDate.of(2025,11,11),45561);
+		Emplyee e2 = new Emplyee (2, "narayan", LocalDate.of(2025, 04, 04),54325);
+		Emplyee e3 = new Emplyee (3, "narayan", LocalDate.of(2025, 07, 05),4325);
+		Emplyee e4 = new Emplyee (4, "narayan", LocalDate.of(2025, 04, 06),5325);
+		Set<Emplyee> eset1=new HashSet<>();
+		eset1.add(e1);
+		eset1.add(e2);
+		eset1.add(e3);
+		eset1.add(e4);
+		Set<Emplyee> eset2=new HashSet<>();
+	}
+
+}

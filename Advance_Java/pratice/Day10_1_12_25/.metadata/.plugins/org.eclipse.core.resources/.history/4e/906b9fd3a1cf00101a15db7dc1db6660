@@ -1,0 +1,5 @@
+package com.demo.beans;
+
+public class Project {
+	// date memebers id ,name ,startdate, and set of Emplyee working in it 
+}

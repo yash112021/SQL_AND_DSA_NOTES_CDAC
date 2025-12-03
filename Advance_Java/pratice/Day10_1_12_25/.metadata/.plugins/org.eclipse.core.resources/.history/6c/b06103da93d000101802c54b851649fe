@@ -1,0 +1,119 @@
+package com.demo.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.demo.beans.Employee;
+import com.demo.beans.Project;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+		//doing the connection of session factory
+		static SessionFactory sf=null;
+		
+		static {
+			sf = HibernateDBUtil.getConnection();
+		}
+	
+	
+		@Override
+		public boolean save(Employee e) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			sess.saveOrUpdate(e);
+			tr.commit();
+			sess.close();
+			return true;
+		}
+
+
+		//finding all the employees
+		@Override
+		public List<Employee> findAllEmp() {
+			List<Employee> lst = new ArrayList<>();
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			lst = sess.createQuery("from emp2", Employee.class).list();
+			tr.commit();
+			sess.close();
+			return null;
+		}
+
+		
+		//deleting the employee from the database
+		@Override
+		public boolean removeById(int id) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			// below flag is to track the status
+			boolean flag=false;
+			//now getting the employee  by the id
+			Employee e = sess.get(Employee.class, id);
+			if(e!=null) {
+				sess.delete(e);
+				flag=true;
+			}
+			return flag;
+		}
+
+		//updating the empoyee by id
+		@Override
+		public boolean modifyById(int eid, String ename, double sal) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			// below flag is to track the status
+			boolean flag=false;
+			//now getting the employee  by the id
+			Employee e = sess.get(Employee.class, eid);
+			if(e!=null) {
+				e.setSal(sal);
+				e.setEname(ename);
+				sess.merge(e);
+				flag=true;
+				
+			}	
+			tr.commit();
+			sess.close();
+			return flag;
+		}
+
+		//finding the employee
+		@Override
+		public Employee findById(int eid) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			Employee e = sess.get(Employee.class, eid);
+			tr.commit();
+			sess.close();
+			return e;
+		}
+
+		//assigning the extra project to the employee
+		@Override
+		public boolean addProjectToEmployee(Employee e, Project p) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			e.getPset().add(p);
+			p.getEset().add(e);
+			tr.commit();
+			sess.close();
+			return true;
+		}
+
+		// Sort By Emplyee by the sal
+		@Override
+		public List<Employee> sortBySal() {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			// now Writing The Query  by using the Hql
+			List<Employee>elst=sess.createQuery("from Emp2 e order by e.sal",Employee.class).list(); // this kubne
+			tr.commit();
+			sess.close();
+			return null;
+		}
+
+}

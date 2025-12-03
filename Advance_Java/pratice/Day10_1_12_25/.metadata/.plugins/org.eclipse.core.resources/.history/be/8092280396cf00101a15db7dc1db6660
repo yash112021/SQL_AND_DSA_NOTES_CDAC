@@ -1,0 +1,38 @@
+package com.demo.test;
+
+import java.time.LocalDate;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.Department;
+import com.demo.beans.Emplyee;
+
+public class TestOnetoManyBiDir {
+
+	public static void main(String[] args) {
+		// creating the Session Factory
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		
+		// creating the  session but using the current session we need to the mapping in the hibernate config file
+		Session sess=sf.getCurrentSession();
+		
+		// Creating the tranasxtion
+		Transaction tr=sess.beginTransaction();
+		
+		//now first Creating the Two Deptartmnet
+		// but now we have to write the constructor which only except the 3 values ast the emplyee is not created
+		Department d1=new Department(61,"INFORMATION TECHNOLOYG","PUNE");
+		Department d2=new Department(77,"COMPUTER SCINCENT","MUMBIA");
+		
+		// NOW CREATING tHE EMPLYEE FOUR  Emplyee
+		Emplyee e1=new Emplyee(11,"yash",LocalDate.of(2025, 12, 01),);
+		
+		
+
+
+	}
+
+}

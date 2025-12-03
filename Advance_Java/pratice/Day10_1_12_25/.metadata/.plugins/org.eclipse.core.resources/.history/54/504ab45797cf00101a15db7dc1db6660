@@ -1,0 +1,73 @@
+package com.demo.test;
+
+import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.Department;
+import com.demo.beans.Emplyee;
+
+public class TestOnetoManyBiDir {
+
+	public static void main(String[] args) {
+		// creating the Session Factory
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		
+		// creating the  session but using the current session we need to the mapping in the hibernate config file
+		Session sess=sf.getCurrentSession();
+		
+		// Creating the tranasxtion
+		Transaction tr=sess.beginTransaction();
+		
+		//now first Creating the Two Deptartmnet
+		// but now we have to write the constructor which only except the 3 values ast the emplyee is not created
+		Department d1=new Department(61,"INFORMATION TECHNOLOYG","PUNE");
+		Department d2=new Department(77,"COMPUTER SCINCENT","MUMBIA");
+		
+		// NOW CREATING tHE EMPLYEE FOUR  Emplyee
+		Emplyee e1=new Emplyee(11,"yash",LocalDate.of(2025, 12, 01),2000,d1);
+		Emplyee e2=new Emplyee(12,"kartik",LocalDate.of(2025, 12, 02),2500,d1);
+		Emplyee e3=new Emplyee(13,"soham",LocalDate.of(2025, 10, 01),3000,d2);
+		Emplyee e4=new Emplyee(14,"rocky",LocalDate.of(2025, 9, 02),3500,d2);
+		
+		
+		//now putting the Emplyee in the set (because our last attribute is remainng of dept to set)
+		
+		
+		//firstrequire the two set
+		Set<Emplyee>eset1 =new HashSet<>();
+		Set<Emplyee>eset2=new HashSet<>();
+		
+		// now adding the Emplyee in the set
+		eset1.add(e1);
+		eset1.add(e2);
+		
+		
+		eset2.add(e3);
+		eset2.add(e4);
+	
+		// now by the setters method we are going to add the fourth attribute by the dept;
+		d1.setEset(eset1);
+		d2.setEset(eset2);
+		
+		//now save it the and then commit and close the object;
+		sess.save(d1);
+		sess.save(d2);
+		sess.save(e1);
+		sess.save(e2);
+		sess.save(e3);
+		sess.save(e4);
+		
+		
+		
+		
+
+
+	}
+
+}

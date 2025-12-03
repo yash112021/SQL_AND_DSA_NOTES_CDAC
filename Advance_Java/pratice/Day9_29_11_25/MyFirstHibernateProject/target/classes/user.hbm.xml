@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+    <class name="com.demo.beans.User" >
+       <id name="empno">
+           <generator class="assigned"></generator>
+       </id>
+       <property name="ename" type="string" column="ename" ></property>
+       <property name="job" type="string" column="job" ></property>
+       <property name="usrname" type="string" column="usrname" ></property>
+       <property name="pwd" type="string" column="pwd" ></property>
+       <property name="role" type="string" column="role"></property>
+      
+    </class>
+    
+  </hibernate-mapping>
+  
+ 

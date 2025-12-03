@@ -1,0 +1,29 @@
+package com.demo.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.demo.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+		//doing the connection of session factory
+		static SessionFactory sf=null;
+		
+		static {
+			sf = HibernateDBUtil.getConnection();
+		}
+	
+	
+		@Override
+		public boolean save(Employee e) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			sess.saveOrUpdate(e);
+			tr.commit();
+			sess.close();
+			return true;
+		}
+
+}

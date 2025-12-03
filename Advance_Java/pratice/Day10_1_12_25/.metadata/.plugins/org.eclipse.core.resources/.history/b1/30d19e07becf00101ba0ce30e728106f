@@ -1,0 +1,26 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+import com.demo.service.ProjectService;
+import com.demo.service.ProjectServiceImpl;
+
+public class TestEmpProjCrud {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		ProjectService pservice = new  ProjectServiceImpl();
+		int choice =0;
+		do {
+			
+			switch(choice) {
+			
+			choice = sc.nextInt();
+			}
+			
+		}while(choice !=6);
+	}
+
+}

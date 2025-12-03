@@ -1,0 +1,26 @@
+package com.demo.service;
+
+import com.demo.dao.ProjectDaoImpl;
+
+public class ProjectServiceImpl implements ProjectService {
+	
+	// creating the object of the Dao
+	private ProjectDaoImpl edao;
+	
+	// default constuctor
+	public ProjectServiceImpl() {
+		super();
+		this.edao = edao;
+	}
+
+
+
+
+	// adding the project
+	@Override
+	public boolean addProject() {
+		
+		return false;
+	}
+
+}

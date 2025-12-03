@@ -1,0 +1,63 @@
+package com.demo.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+	// by using the annotations
+	@Id
+	private int uid;
+	private String unmae;
+	private String email;
+	
+	
+	// default constructor
+	public User() {
+		super();
+	}
+
+	// paramterised constructor
+	public User(int uid, String unmae, String email) {
+		super();
+		this.uid = uid;
+		this.unmae = unmae;
+		this.email = email;
+	}
+	
+	// getters and Setters
+	public int getUid() {
+		return uid;
+	}
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
+	public String getUnmae() {
+		return unmae;
+	}
+
+	public void setUnmae(String unmae) {
+		this.unmae = unmae;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	// to String Method
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", unmae=" + unmae + ", email=" + email + "]";
+	}
+	
+	
+	
+	
+	
+}

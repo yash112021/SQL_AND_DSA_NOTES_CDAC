@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import java.util.Set;
+
+import com.demo.beans.Project;
+
+public interface ProjectDao {
+
+	boolean addPrj(Project project);
+
+	Set<Project> findById(int pid);
+
+	Project findByPrjId(int pid);
+
+	Set<Project> findById(String[] parr);
+
+}

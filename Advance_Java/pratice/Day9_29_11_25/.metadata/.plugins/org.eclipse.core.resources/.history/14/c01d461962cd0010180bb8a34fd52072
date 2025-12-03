@@ -1,0 +1,23 @@
+package com.demo.test;
+
+import java.lang.module.Configuration;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+
+public class TestUser {
+
+	public static void main(String[] args) {
+		// testing of the user class
+		
+		// first step 1
+		// creating the session factory
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session ss=sf.getCurrentSession();
+		Transaction tr=ss.beginTransaction();
+
+	}
+
+}

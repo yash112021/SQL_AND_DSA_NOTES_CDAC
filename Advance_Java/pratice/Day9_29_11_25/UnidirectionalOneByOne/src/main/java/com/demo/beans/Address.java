@@ -1,0 +1,52 @@
+package com.demo.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="jy_add")
+public class Address {
+	@Id
+	@GeneratedValue
+private int aid;
+private String city;
+private int pincode;
+public Address() {
+	super();
+}
+public Address(int aid, String city, int pincode) {
+	super();
+	this.aid = aid;
+	this.city = city;
+	this.pincode = pincode;
+}
+public int getAid() {
+	return aid;
+}
+public void setAid(int aid) {
+	this.aid = aid;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public int getPincode() {
+	return pincode;
+}
+public void setPincode(int pincode) {
+	this.pincode = pincode;
+}
+@Override
+public String toString() {
+	return "Address [aid=" + aid + ", city=" + city + ", pincode=" + pincode + "]";
+}
+
+
+}

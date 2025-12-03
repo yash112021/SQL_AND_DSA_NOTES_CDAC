@@ -1,0 +1,51 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+now here we need to the Mapping of the  User files
+if you are not using the annotations then you have to create this files 
+  
+
+
+<hibernate-mapping>
+	<class name="com.demo.beans.User" >
+	<id name="empno">
+		<generator class="assigned"></generator>
+	</id>
+	
+	EmpNo, Ename , job ,user,name ,pwd ,role
+	<property name="ename" type="String" column="Ename" not-null="true"></property>
+	<property name="job" type="String" column="job"></property>
+	<property name="usrname" type="String" column="usrname"></property>
+	<property name="pwd" type="String" column="pwd"></property>
+	<property name="role" type="string" column="role"></property>
+	</class>>
+</hibernate-mapping>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+  "-//Hibernate/Hibernate Configuration DTD//EN" 
+  "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- Version 8 MySQL hiberante-cfg.xml example for Hibernate 5 -->
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/spring?useSSL=false</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root123</property>
+    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <property name="connection.pool_size">3</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.auto">update</property>
+    <!-- mapping class" / -->
+   <!--  <mapping class="com.demo.beans.Department"/>-->
+    <!--  <mapping class="com.demo.model.Product"/> 
+    <mapping class="com.demo.model.MyUser"/> --> 
+     <mapping resource="product.hbm.xml"/>
+    <mapping resource="MyUser.hbm.xml"/>    
+  </session-factory>
+</hibernate-configuration>
+ -->

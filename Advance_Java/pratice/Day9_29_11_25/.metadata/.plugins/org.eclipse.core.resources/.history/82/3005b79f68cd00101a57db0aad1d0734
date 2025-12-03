@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<!-- now here we need to the Mapping of the  User files -->
+<!--if you are not using the annotations then you have to create this files  -->
+  
+
+
+<hibernate-mapping>
+	<class name="com.demo.beans.User" >
+	<id name="empno">
+		<generator class="assigned"></generator>
+	</id>
+	
+	<!--EmpNo, Ename , job ,user,name ,pwd ,role-->
+	<property name="ename" type="String" column="EmpNo" not-null="true"></property>
+	<property name="job" type="String" column="job"></property>
+	<property name="usrname" type="String" column="user name"></property>
+	<property name="pwd" type="String" column="pwd"></property>
+	<property name="role" type="string" column="role"></property>
+	</class>>
+</hibernate-mapping>
+
+
+

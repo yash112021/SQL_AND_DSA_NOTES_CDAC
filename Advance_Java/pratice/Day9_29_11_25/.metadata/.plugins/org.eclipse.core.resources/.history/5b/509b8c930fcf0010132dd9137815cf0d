@@ -1,0 +1,24 @@
+package com.demo.Test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.User;
+
+public class TestUnidirectionalGetData {
+
+	public static void main(String[] args) {
+	
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session sess = sf.openSession();
+		Transaction tr = sess.beginTransaction();
+		
+		System.out.println("before get");
+		User usr = sess.get(User.class, 2);
+		System.out.println("after get");
+	}
+
+}

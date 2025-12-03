@@ -1,0 +1,85 @@
+package com.demo.beans;
+
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+		// creating a user which will have the uid,usrname,mobileno_adddres (and the address will be the anotehr class)
+	@Id
+	private int uid;
+	private String username;
+	private String mob_no;
+	
+	private Address add;   // creating  a class in the beans package
+	
+	
+	//default constructor 
+	public User() {
+		super();
+	}
+
+
+	// parmetreised construtor
+	public User(int uid, String username, String mob_no, Address add) {
+		super();
+		this.uid = uid;
+		this.username = username;
+		this.mob_no = mob_no;
+		this.add = add;
+	}
+
+
+	// getters and setters
+	public int getUid() {
+		return uid;
+	}
+
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+	public String getMob_no() {
+		return mob_no;
+	}
+
+
+	public void setMob_no(String mob_no) {
+		this.mob_no = mob_no;
+	}
+
+
+	public Address getAdd() {
+		return add;
+	}
+
+
+	public void setAdd(Address add) {
+		this.add = add;
+	}
+
+
+	// toString method 
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", username=" + username + ", mob_no=" + mob_no + ", add=" + add + "]";
+	}
+	
+	
+	
+	
+	
+}

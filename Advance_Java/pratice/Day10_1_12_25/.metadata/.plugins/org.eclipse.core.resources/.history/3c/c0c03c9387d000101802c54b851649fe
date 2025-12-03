@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import com.demo.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+		//doing the connection of session factory
+		static SessionFactory sf=null;
+	
+	
+	@Override
+	public boolean save(Employee e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

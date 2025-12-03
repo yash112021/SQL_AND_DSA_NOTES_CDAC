@@ -1,0 +1,3 @@
+com\demo\beans\Project.class
+com\demo\beans\Emplyee.class
+com\demo\test\TestManyToManyBiDir.class

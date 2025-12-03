@@ -1,0 +1,30 @@
+package com.demo.dao;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.demo.beans.Project;
+
+public class ProjectDaoImpl implements ProjectDao {
+	static SessionFactory sf=null;
+	static {
+		// making the connection with that class
+		sf=HibernateDBUtil.getConnection();
+	}
+	
+
+	@Override
+	public boolean addPrj(Project project) {
+		Session sess=sf.openSession();
+		Transaction tr=sess.beginTransaction();
+		
+		
+		tr.commit();
+		sess.save(project);
+		sess.close();
+		return false;
+	}
+
+}

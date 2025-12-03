@@ -1,0 +1,30 @@
+package com.demo.beans;
+
+import java.util.Set;
+
+public class Department {
+	// date Members id,name,loation
+	private int did;
+	private String dname;
+	private String dloc;
+	// one department can have many Emplyees so we are creating the set]
+	Set<Emplyee> eset;
+	
+	// defalut constructor
+	public Department() {
+		super();
+	}
+
+	// parmatersied constructor 
+	public Department(int did, String dname, String dloc, Set<Emplyee> eset) {
+		super();
+		this.did = did;
+		this.dname = dname;
+		this.dloc = dloc;
+		this.eset = eset;
+	}
+	
+	
+	
+	
+}

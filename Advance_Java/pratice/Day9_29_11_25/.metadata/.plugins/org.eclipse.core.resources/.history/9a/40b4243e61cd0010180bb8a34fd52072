@@ -1,0 +1,15 @@
+package com.demo.test;
+
+public class TestUser {
+
+	public static void main(String[] args) {
+		// testing of the user class
+		
+		// first step 1
+		// creating the session factory
+		SessionFactory
+		
+
+	}
+
+}

@@ -1,0 +1,79 @@
+package com.demo.beans;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Product1 {
+	
+	// data memebers
+	@Id
+	private int pid;
+	private String pname;
+	private String qty;
+	private double price;
+	
+	// default constructor 
+	public Product1() {
+		super();
+	}
+
+	//  paramaterised constructor 	
+	public Product1(int pid, String pname, String qty, double price) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.qty = qty;
+		this.price = price;
+	}
+
+	// TO STRING
+	@Override
+	public String toString() {
+		return "Product1 [pid=" + pid + ", pname=" + pname + ", qty=" + qty + ", price=" + price + "]";
+	}
+
+	
+	// GETTERS AND SETTERS METHOD
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
+	public String getQty() {
+		return qty;
+	}
+
+	public void setQty(String qty) {
+		this.qty = qty;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+}

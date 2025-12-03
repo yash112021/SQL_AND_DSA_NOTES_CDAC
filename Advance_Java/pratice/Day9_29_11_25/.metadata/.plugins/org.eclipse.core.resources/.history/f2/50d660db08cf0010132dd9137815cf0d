@@ -1,0 +1,53 @@
+package comd.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.Address;
+import com.demo.beans.User;
+
+public class TestUser {
+
+	public static void main(String[] args) {
+		// Testing User 
+		// now Creating the Session Factory step 1
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+	/*	
+		// now we are going creatin the Session step2
+		Session sess= sf.openSession();
+		
+		// now the third step 3 we are going create the Transaction
+		Transaction tr=sess.beginTransaction();
+		
+		// now creating the the address object first and Storing it in the user 
+		Address a =new Address(11,"Pune","489354");
+		User user=new User(112021,"yash","9322050846",a);
+		
+		// now step 4 saving it in the sessino
+		sess.save(user);
+		// commit step 5
+		tr.commit();
+		
+		// step 5 and6 close the Session and factory too
+		sess.close();
+*/
+		
+		//now create another session and fetch the data
+		Session sess1= sf.openSession();
+		Transaction tr1=sess.beginTransaction();
+		System.out.println("Before Get--->");
+		User ab=sess1.get(User.class, 112021);
+		System.out.println("After Get-->");
+		System.out.println(ab);
+		//commit of session2 
+		tr1.commit();
+		//close the seesion 2
+		sess1.close();
+		
+		sf.close();
+
+	}
+
+}

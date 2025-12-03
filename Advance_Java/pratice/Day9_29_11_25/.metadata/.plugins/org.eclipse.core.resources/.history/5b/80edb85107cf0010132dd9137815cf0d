@@ -1,0 +1,41 @@
+package com.demo.test;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.MyUser;
+import com.demo.beans.Product;
+import com.demo.beans.User;
+
+
+public class TestUser {
+
+	public static void main(String[] args) {
+		// testing of the user class
+		
+		// first step 1
+		// creating the session factory
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		//create a MyUser object
+		User usr1=new User(11,"yash","SE","yash@123","YAsh*(*","admin");
+		Session ss=sf.openSession();
+		Transaction tr=ss.beginTransaction();
+	  // amdmin /staff
+		// creating the object of the user
+		
+		
+		// saving object from the transisent to presistent
+		ss.save(usr1);
+//		ss.save(usr2);
+		tr.commit();
+		ss.close();
+		sf.close();
+		
+		
+
+	}
+
+}

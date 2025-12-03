@@ -1,0 +1,34 @@
+package com.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.Emplyee;
+import com.demo.beans.Project;
+
+public class TestGetDataManyToMany {
+
+	public static void main(String[] args) {
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session sess = sf.openSession();
+		Transaction tr = sess.beginTransaction();
+		
+		System.out.println("before get");
+		Project p1 = sess.get(Project.class, 12);
+		System.out.println("after get project");
+		System.out.println(p1);
+		
+		System.out.println("before get employee");
+		Emplyee e1 = sess.get(Emplyee.class,2);
+		System.out.println("after get employee");
+		System.out.println(e1);
+		System.out.println(e1.getEset());
+		tr.commit();
+		sess.close();
+		sf.close();
+	}
+
+}

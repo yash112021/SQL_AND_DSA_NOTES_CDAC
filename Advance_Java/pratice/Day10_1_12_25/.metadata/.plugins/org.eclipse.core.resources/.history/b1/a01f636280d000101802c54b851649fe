@@ -1,0 +1,46 @@
+package com.demo.service;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+import com.demo.beans.Project;
+import com.demo.dao.ProjectDao;
+import com.demo.dao.ProjectDaoImpl;
+
+public class ProjectServiceImpl implements ProjectService {
+	
+	// creating the object of the Dao
+	private ProjectDao edao;
+	
+	// default constuctor 
+	public ProjectServiceImpl() {
+//		super();
+		edao =new ProjectDaoImpl() ;
+	}
+
+
+
+
+	// adding the project
+	@Override
+	public boolean addProject() {
+		Scanner sc=new Scanner(System.in);
+		// accepting the values form the user 
+//		private int pid;
+//	    private String pname;
+//	    private LocalDate startdate;
+		
+		System.out.print("Enter the Project id --> ");
+		int pid=sc.nextInt();	
+		System.out.print("Enter the Project name --> ");
+		String pname=sc.next();	
+		System.out.print("Enter the Project StartDate --> ");
+		String date=sc.next();	
+		//now convert String to to the date fornmat
+		LocalDate ldt=LocalDate.parse(date,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		
+		return edao.addPrj(new Project(pid,pname,ldt));
+	}
+
+}

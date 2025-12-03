@@ -1,0 +1,48 @@
+package com.demo.dao;
+
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.demo.beans.Project;
+
+public class ProjectDaoImpl implements ProjectDao {
+	static SessionFactory sf=null;
+	static {
+		// making the connection with that class
+		sf=HibernateDBUtil.getConnection();
+	}
+	
+
+	// adding the project
+	@Override
+	public boolean addPrj(Project project) {
+		Session sess=sf.openSession();
+		Transaction tr= sess.beginTransaction();
+		
+		tr.commit();
+		boolean flag=(boolean) sess.save(project);
+		sess.close();
+		return flag;
+	}
+
+
+	@Override
+	public Set<Project> findById(String[] parr) {
+	Set<Project> pset = new HashSet<>();
+	Session sess = sf.openSession();
+	Transaction tr = sess.beginTransaction();
+	//now whatever project  ids we are getting from the user we will search
+//	them in the database if they exists then we will add thwem into pset
+	for(String p : parr) {
+		Project prj = sess.get(Project.class, p);
+		pset.add(prj);
+	}
+		return null;
+	}
+
+}

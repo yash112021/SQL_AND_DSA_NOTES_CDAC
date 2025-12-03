@@ -1,0 +1,14 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+import java.util.Set;
+
+public class Emplyee {
+	// data members id,name,date sal and set of project
+	private int eid;
+	private String name;
+	private LocalDate date;
+	private double sal;
+	// one data members is set of the project 
+	Set<Project>eset;
+}

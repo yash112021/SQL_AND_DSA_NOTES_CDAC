@@ -1,0 +1,11 @@
+package com.demo.beans;
+
+public class User {
+	// by using the annotations
+	private int uid;
+	private String unmae;
+	private String email;
+	
+	// default constructor
+	
+}

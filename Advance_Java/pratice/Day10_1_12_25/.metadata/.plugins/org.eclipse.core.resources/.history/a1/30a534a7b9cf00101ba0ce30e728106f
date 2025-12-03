@@ -1,0 +1,35 @@
+package com.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.Department;
+import com.demo.beans.Emplyee;
+
+public class TestGetDataOnetoMany {
+	public static void main(String[] args) {
+
+	SessionFactory sf = new Configuration().configure().buildSessionFactory();
+	Session sess = sf.getCurrentSession();
+	Transaction tr = sess.beginTransaction();
+	System.out.println("before get ");
+	Department d = sess.get(Department.class , 61);
+	System.out.println("after get");
+	System.out.println("-------------------");
+	System.out.println(d);
+	
+	System.out.println("before get employee");
+	Emplyee e = sess.get(Emplyee.class, 11);
+	System.out.println("After get employee");
+	if(e==null) {
+		System.out.println("Emplyee not found-->");
+	}
+	System.out.println(e);
+	System.out.println(e.getDept().getDname());
+	tr.commit();
+	sess.close();
+	sf.close();
+}
+}

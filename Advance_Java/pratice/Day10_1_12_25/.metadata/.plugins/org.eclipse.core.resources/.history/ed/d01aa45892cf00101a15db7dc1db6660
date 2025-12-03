@@ -1,0 +1,31 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class Emplyee {
+	// data Members id, name ,date,sal
+	private int eid;
+	private String name;
+	private LocalDate date;
+	private double sal;
+	private Department dept;
+	
+	// defalut constructor
+	public Emplyee() {
+		super();
+	}
+
+	// parmatersied constructor 
+	public Emplyee(int eid, String name, LocalDate date, double sal, Department dept) {
+		super();
+		this.eid = eid;
+		this.name = name;
+		this.date = date;
+		this.sal = sal;
+		this.dept = dept;
+	}
+	
+	
+	
+	
+}

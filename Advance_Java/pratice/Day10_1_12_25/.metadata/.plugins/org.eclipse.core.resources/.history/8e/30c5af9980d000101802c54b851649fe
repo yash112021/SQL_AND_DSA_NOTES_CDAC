@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import com.demo.beans.Project;
+
+public class ProjectDaoImpl implements ProjectDao {
+
+	
+	
+	
+	
+	@Override
+	public boolean addPrj(Project project) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

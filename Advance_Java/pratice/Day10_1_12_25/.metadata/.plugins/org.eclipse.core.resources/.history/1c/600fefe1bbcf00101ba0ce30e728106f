@@ -1,0 +1,18 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="emp2")
+public class Employee {
+	@Id
+	private int eid;
+	private String ename;
+	private LocalDate hiredate;
+	private double sal;
+	
+}

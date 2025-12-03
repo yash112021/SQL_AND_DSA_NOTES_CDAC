@@ -1,0 +1,49 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+now here we need to the Mapping of the  User files
+if you are not using the annotations then you have to create this files 
+  
+
+
+<hibernate-mapping>
+	<class name="com.demo.beans.User" >
+	<id name="empno">
+		<generator class="assigned"></generator>
+	</id>
+	
+	EmpNo, Ename , job ,user,name ,pwd ,role
+	<property name="ename" type="String" column="Ename" not-null="true"></property>
+	<property name="job" type="String" column="job"></property>
+	<property name="usrname" type="String" column="usrname"></property>
+	<property name="pwd" type="String" column="pwd"></property>
+	<property name="role" type="string" column="role"></property>
+	</class>>
+</hibernate-mapping>
+
+
+
+
+<!--  
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping>
+    <class name="com.demo.beans.User" >
+       <id name="empno">
+           <generator class="assigned"></generator>
+       </id>
+       <property name="ename" type="string" column="ename" ></property>
+       <property name="job" type="string" column="job" ></property>
+       <property name="usrname" type="string" column="usrname" ></property>
+       <property name="pwd" type="string" column="pwd" ></property>
+       <property name="role" type="string" column="role"></property>
+      
+    </class>
+    
+  </hibernate-mapping>
+  
+  -->

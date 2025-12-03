@@ -1,0 +1,28 @@
+package com.demo.beans;
+
+public class User {
+		// creating a user which will have the uid,usrname,mobileno_adddres (and the address will be the anotehr class)
+	private int uid;
+	private String username;
+	private String mob_no;
+	private Address add;   // creating  a class in the beans package
+	
+	
+	//default constructor 
+	public User() {
+		super();
+	}
+
+
+	// parmetreised construtor
+	public User(int uid, String username, String mob_no, Address add) {
+		super();
+		this.uid = uid;
+		this.username = username;
+		this.mob_no = mob_no;
+		this.add = add;
+	}
+	
+	
+	
+}

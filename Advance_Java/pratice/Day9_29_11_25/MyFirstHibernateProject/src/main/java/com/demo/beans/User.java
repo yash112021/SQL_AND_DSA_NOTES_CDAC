@@ -1,0 +1,90 @@
+package com.demo.beans;
+
+public class User {
+	// now here we are creating the class user with the help of the hibenate orm it will send the data to the valuser table
+//	EmpNo | Ename   | job     | user name   | pwd        | role
+	private int empno;
+	private String ename;
+	private String job;
+	private String usrname;
+	private String pwd;
+	private String role;  // amdmin /staff
+	
+	
+	// default constructor 
+	public User() {
+		super();
+	}
+
+	//parmeterised constructor 
+	public User(int empno, String ename, String job, String usrname, String pwd, String role) {
+		super();
+		this.empno = empno;
+		this.ename = ename;
+		this.job = job;
+		this.usrname = usrname;
+		this.pwd = pwd;
+		this.role = role;
+	}
+	
+	// getters and setters
+	public int getEmpno() {
+		return empno;
+	}
+
+	public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+
+	public String getEname() {
+		return ename;
+	}
+
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public String getUsrname() {
+		return usrname;
+	}
+
+	public void setUsrname(String usrname) {
+		this.usrname = usrname;
+	}
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+	
+	// toString Method
+	@Override
+	public String toString() {
+		return "User [empno=" + empno + ", Ename=" + ename + ", job=" + job + ", usrname=" + usrname + ", pwd=" + pwd
+				+ ", role=" + role + "]";
+	}
+	
+	
+	
+	
+	
+}

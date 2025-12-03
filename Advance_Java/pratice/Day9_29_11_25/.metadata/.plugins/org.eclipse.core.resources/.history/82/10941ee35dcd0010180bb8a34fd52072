@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<!-- now here we need to the Mapping of the  User files -->
+<!--if you are not using the annotations then you have to create this files  -->
+
+<hibernate-mapping>
+	<class name="com.demo.beans.User">
+	<id name="empno">
+		<generator class="assigned"></generator>
+</hibernate-mapping>

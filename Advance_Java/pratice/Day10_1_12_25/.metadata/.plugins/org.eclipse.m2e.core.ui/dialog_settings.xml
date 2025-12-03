@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\IET\Desktop\maven\Day10_1_12_25\Employee_Project_CrudOperation"/>
+			<item value="C:\Users\IET\Desktop\maven\Day10_1_12_25\ManyToManyBiDirect\src\main\java\com\demo\beans\Emplyee.java"/>
+			<item value="C:\Users\IET\Documents\advjava\Day10\OneToManyBidirectional\src\main\java\com\demo\test\TestGetData.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.demo"/>
+		</list>
+		<list key="name">
+			<item value="Menu_CRUDOperation_Emp_Proj"/>
+			<item value="Employee_Project_CrudOperation"/>
+			<item value="ManyToManyBiDir"/>
+			<item value="ManyToManyBiDirect"/>
+			<item value="OneToManyBidiret"/>
+		</list>
+		<list key="artifactId">
+			<item value="Menu_CRUDOperation_Emp_Proj"/>
+			<item value="Employee_Project_CrudOperation"/>
+			<item value="ManyToManyBiDir"/>
+			<item value="ManyToManyBiDirect"/>
+			<item value="OneToManyBidiret"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

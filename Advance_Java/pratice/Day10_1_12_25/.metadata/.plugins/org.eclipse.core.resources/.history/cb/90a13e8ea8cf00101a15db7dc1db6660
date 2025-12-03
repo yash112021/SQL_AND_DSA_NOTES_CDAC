@@ -1,0 +1,15 @@
+package com.demo.test;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class TestManyToManyBiDir {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		Session sess = sf.openSession();
+	}
+
+}

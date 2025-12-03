@@ -1,0 +1,21 @@
+package com.demo.dao;
+
+import org.hibernate.SessionFactory;
+
+import com.demo.beans.Project;
+
+public class ProjectDaoImpl implements ProjectDao {
+	static SessionFactory sf=null;
+	static {
+		// making the connection with that class
+		sf=HibernateDBUtil.getConnection();
+	}
+	
+
+	@Override
+	public boolean addPrj(Project project) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

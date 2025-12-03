@@ -1,0 +1,92 @@
+package com.demo.beans;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="dept")
+public class Department {
+	// date Members id,name,loation
+	@Id
+	private int did;
+	private String dname;
+	private String dloc;
+	
+
+
+	// one department can have many Emplyees so we are creating the set
+	@OneToMany(mappedBy="dept")
+	Set<Emplyee> eset;
+	
+	// defalut constructor
+	public Department() {
+		super();
+	}
+
+	// parmatersied constructor 
+	public Department(int did, String dname, String dloc, Set<Emplyee> eset) {
+		super();
+		this.did = did;
+		this.dname = dname;
+		this.dloc = dloc;
+		this.eset = eset;
+	}
+	// parmatersied constructor but with 3 Members
+	public Department(int did, String dname, String dloc) {
+		super();
+		this.did = did;
+		this.dname = dname;
+		this.dloc = dloc;
+	}
+	
+	
+	
+
+	///  getters and setters
+	public int getDid() {
+		return did;
+	}
+
+	public void setDid(int did) {
+		this.did = did;
+	}
+
+	public String getDname() {
+		return dname;
+	}
+
+	public void setDname(String dname) {
+		this.dname = dname;
+	}
+
+	public String getDloc() {
+		return dloc;
+	}
+
+	public void setDloc(String dloc) {
+		this.dloc = dloc;
+	}
+
+	public Set<Emplyee> getEset() {
+		return eset;
+	}
+
+	public void setEset(Set<Emplyee> eset) {
+		this.eset = eset;
+	}
+
+	
+	// toString Method
+	@Override
+	public String toString() {
+		return "Department [did=" + did + ", dname=" + dname + ", dloc=" + dloc + ", eset=" + eset + "]";
+	}
+	
+	
+	
+	
+}

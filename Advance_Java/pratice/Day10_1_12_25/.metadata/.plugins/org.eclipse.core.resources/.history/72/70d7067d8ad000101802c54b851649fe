@@ -1,0 +1,61 @@
+package com.demo.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.demo.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+		//doing the connection of session factory
+		static SessionFactory sf=null;
+		
+		static {
+			sf = HibernateDBUtil.getConnection();
+		}
+	
+	
+		@Override
+		public boolean save(Employee e) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			sess.saveOrUpdate(e);
+			tr.commit();
+			sess.close();
+			return true;
+		}
+
+
+		//finding all the employees
+		@Override
+		public List<Employee> findAllEmp() {
+			List<Employee> lst = new ArrayList<>();
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			lst = sess.createQuery("from emp2", Employee.class).list();
+			tr.commit();
+			sess.close();
+			return null;
+		}
+
+
+		@Override
+		public boolean removeById(int id) {
+			Session sess = sf.openSession();
+			Transaction tr = sess.beginTransaction();
+			// below flag is to track the status
+			boolean flag=false;
+			//now getting the employee  by the id
+			Employee e = sess.get(Employee.class, id);
+			if(e!=null) {
+				sess.delete(e);
+				flag=true;
+			}
+			return false;
+		}
+
+}

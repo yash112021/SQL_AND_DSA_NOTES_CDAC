@@ -1,0 +1,61 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+import com.demo.service.EmployeeService;
+import com.demo.service.EmployeeServiceImpl;
+import com.demo.service.ProjectService;
+import com.demo.service.ProjectServiceImpl;
+
+public class TestEmpProjCrud {
+
+	public static void main(String[] args) {
+		// here creating the object of the service one of both the employee and the project
+		ProjectService pservice = new  ProjectServiceImpl();
+		EmployeeService eservice=new EmployeeServiceImpl();
+		
+		Scanner sc = new Scanner(System.in);
+		
+
+		int choice =0;
+		do {
+			
+			
+			System.out.println("1.Add Project");
+			System.out.println("2.Add Employees");
+			System.out.println("3.Show all employeest");
+			System.out.println("4.delete employee");
+			System.out.println("5.update employe sal");
+			System.out.println("6.exit\n choice");
+			choice = sc.nextInt();
+			
+			switch(choice) {
+			case 1 -> {
+				// now here we are adding the project to the we take this till dao
+				boolean status =pservice.addProject(); // return us the status
+				if(status) {
+					System.out.println("Project Added Succesfuuly");
+				}else {
+					System.out.println("project not added some erroe occred");
+				}
+			}
+			case 2-> {
+				boolean status = eservice.addEmployee();
+				
+				if(status) {
+					System.out.println("Employee Added Succesfuuly");
+				}else {
+					System.out.println("Employee not added");
+				}
+			}
+			
+			case 3->{
+				
+			}
+			
+			}
+			
+		}while(choice !=6);
+	}
+
+}
