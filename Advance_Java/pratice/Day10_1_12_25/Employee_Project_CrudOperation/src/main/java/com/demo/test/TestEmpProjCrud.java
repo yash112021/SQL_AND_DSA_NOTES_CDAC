@@ -118,11 +118,12 @@ public class TestEmpProjCrud {
 				eservice.close();
 				sc.close();
 				System.out.println("Thankyou for Visting --->>");
+				
 			}
 			
 			}
 			
-		}while(choice !=6);
+		}while(choice !=8);
 	}
 
 }

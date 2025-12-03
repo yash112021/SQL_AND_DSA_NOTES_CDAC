@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name="proj")
 public class Project {
 	@Id
-	private int pid;
+	private String pid;
     private String pname;
     private LocalDate startdate;
     @ManyToMany(mappedBy="pset", cascade= CascadeType.ALL)
@@ -21,23 +21,23 @@ public class Project {
 	public Project() {
 		super();
 	}
-	public Project(int pid, String pname, LocalDate startdate, Set<Employee> eset) {
+	public Project(String pid, String pname, LocalDate startdate, Set<Employee> eset) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.startdate = startdate;
 		this.eset = eset;
 	}
-	public Project(int pid, String pname, LocalDate startdate) {
+	public Project(String pid, String pname, LocalDate startdate) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.startdate = startdate;
 	}
-	public int getPid() {
+	public String getPid() {
 		return pid;
 	}
-	public void setPid(int pid) {
+	public void setPid(String pid) {
 		this.pid = pid;
 	}
 	public String getPname() {

@@ -11,7 +11,7 @@ import org.hibernate.Transaction;
 import com.demo.beans.Project;
 
 public class ProjectDaoImpl implements ProjectDao {
-	static SessionFactory sf=null;
+	static SessionFactory sf;
 	static {
 		// making the connection with that class
 		sf=HibernateDBUtil.getConnection();
@@ -25,9 +25,9 @@ public class ProjectDaoImpl implements ProjectDao {
 		Transaction tr= sess.beginTransaction();
 		
 		tr.commit();
-		boolean flag=(boolean) sess.save(project);
+		sess.save(project);
 		sess.close();
-		return flag;
+		return true;
 	}
 
 

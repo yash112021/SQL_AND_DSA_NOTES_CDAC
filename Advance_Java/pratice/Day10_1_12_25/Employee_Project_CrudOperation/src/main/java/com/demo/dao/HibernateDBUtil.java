@@ -16,7 +16,7 @@ public class HibernateDBUtil {
 			return sf;
 			
 		}
-		return null;
+		return sf;
 	}
 	
 	// fucntion for closing the fucntion

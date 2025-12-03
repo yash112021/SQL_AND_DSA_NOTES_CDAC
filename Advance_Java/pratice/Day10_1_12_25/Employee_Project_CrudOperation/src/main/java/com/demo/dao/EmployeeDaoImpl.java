@@ -14,7 +14,7 @@ import com.demo.beans.Project;
 public class EmployeeDaoImpl implements EmployeeDao{
 
 		//doing the connection of session factory
-		static SessionFactory sf=null;
+		static SessionFactory sf;
 		
 		static {
 			sf = HibernateDBUtil.getConnection();
@@ -38,10 +38,10 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			List<Employee> lst = new ArrayList<>();
 			Session sess = sf.openSession();
 			Transaction tr = sess.beginTransaction();
-			lst = sess.createQuery("from emp2", Employee.class).list();
+			lst = sess.createQuery("from Employee", Employee.class).list();
 			tr.commit();
 			sess.close();
-			return null;
+			return lst;
 		}
 
 		
@@ -58,6 +58,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 				sess.delete(e);
 				flag=true;
 			}
+			tr.commit();
+			sess.close();
 			return flag;
 		}
 
@@ -100,6 +102,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			Transaction tr = sess.beginTransaction();
 			e.getPset().add(p);
 			p.getEset().add(e);
+			sess.update(e);  // updating the Emplyee
 			tr.commit();
 			sess.close();
 			return true;
@@ -111,7 +114,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			Session sess = sf.openSession();
 			Transaction tr = sess.beginTransaction();
 			// now Writing The Query  by using the Hql
-			List<Employee>elst=sess.createQuery("from Emp2 e order by e.sal",Employee.class).list(); // this kubne
+			List<Employee>elst=sess.createQuery("from Emplyoee e order by e.sal",Employee.class).list(); // this kubne
 			tr.commit();
 			sess.close();
 			return null;

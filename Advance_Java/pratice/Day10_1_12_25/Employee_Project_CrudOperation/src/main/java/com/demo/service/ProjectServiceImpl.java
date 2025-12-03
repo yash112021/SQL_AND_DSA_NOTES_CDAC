@@ -32,7 +32,7 @@ public class ProjectServiceImpl implements ProjectService {
 //	    private LocalDate startdate;
 		
 		System.out.print("Enter the Project id --> ");
-		int pid=sc.nextInt();	
+		String  pid=sc.next();	
 		System.out.print("Enter the Project name --> ");
 		String pname=sc.next();	
 		System.out.print("Enter the Project StartDate --> ");
