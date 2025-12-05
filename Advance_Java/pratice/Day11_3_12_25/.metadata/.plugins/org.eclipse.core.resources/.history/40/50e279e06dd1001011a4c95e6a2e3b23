@@ -1,0 +1,7 @@
+package com.demo.beans;
+
+public class NonPerishable extends Product {
+	// data Member Non perishable 
+	private int gurantee;
+
+}

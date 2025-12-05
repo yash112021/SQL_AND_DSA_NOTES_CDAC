@@ -1,0 +1,8 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class Perishable extends Product{
+	// date Memeber
+	private LocalDate expiredate;
+}

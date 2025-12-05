@@ -1,0 +1,6 @@
+package snippet;
+
+public class Snippet {
+	Product p1=new NonPerishable(12,"chair",37,4567,LocalDate.of(2025,11,11),11);
+}
+

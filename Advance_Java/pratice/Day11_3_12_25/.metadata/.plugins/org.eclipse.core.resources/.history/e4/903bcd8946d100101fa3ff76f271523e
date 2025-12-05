@@ -1,0 +1,11 @@
+package com.demo.beans;
+
+public class Product {
+	// this is a Parent Tag 
+	private int pid;
+	private String pname;
+	private int qty;
+	private double price;
+	private LocalDate ldt;
+
+}

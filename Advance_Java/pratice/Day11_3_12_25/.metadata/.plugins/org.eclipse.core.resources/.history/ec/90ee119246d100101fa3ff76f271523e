@@ -1,0 +1,22 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class Product {
+	// this is a Parent Tag 
+	private int pid;
+	private String pname;
+	private int qty;
+	private double price;
+	private LocalDate mfgDate;
+	
+	// default constructor 
+	public Product() {
+		super();
+	}
+	
+	
+	
+	
+
+}

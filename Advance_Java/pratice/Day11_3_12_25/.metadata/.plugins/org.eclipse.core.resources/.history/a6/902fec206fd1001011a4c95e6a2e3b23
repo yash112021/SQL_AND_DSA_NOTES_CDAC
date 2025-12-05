@@ -1,0 +1,28 @@
+package com.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.NonPerishable;
+import com.demo.beans.Product;
+
+public class TestTableMappedInheritances {
+	public static void main(String[] args) {
+		//creating the session factory 
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session ss=sf.openSession();
+		Transaction tr=ss.beginTransaction();
+		
+		// creating the object
+		Product p=new Perishable();
+		Product p1=new NonPerishable();
+		ss.save();
+		tr.commit();
+		ss.close();
+		sf.close();
+		
+	}
+
+}	

@@ -1,0 +1,34 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class NonPerishable extends Product {
+	// child class which is having the gurantee
+	private int gurantee;
+
+	//default constuctor 
+	public NonPerishable() {
+		super();
+	}
+
+	// parmaterised constructor 
+	public NonPerishable(int pid, String pname, int qty, double price, LocalDate mfgDate, int gurantee) {
+		super(pid, pname, qty, price, mfgDate);
+		this.gurantee = gurantee;
+	}
+
+
+	// To STring Method
+	public int getGurantee() {
+		return gurantee;
+	}
+
+
+	public void setGurantee(int gurantee) {
+		this.gurantee = gurantee;
+	}
+	
+	
+		
+	
+}

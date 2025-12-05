@@ -1,0 +1,11 @@
+package com.demo.test;
+
+import org.hibernate.SessionFactory;
+
+public class TestGetData {
+	public static void main(String[] args) {
+		// getting the data 
+		SessionFactory sf=new Configuration().configure().b
+
+	}
+	}	

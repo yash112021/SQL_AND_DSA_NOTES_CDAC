@@ -1,0 +1,5 @@
+com\demo\beans\Product.class
+com\demo\test\TestGetDataJoinedTable.class
+com\demo\beans\NonPerishable.class
+com\demo\test\TestJoinedTableInheritance.class
+com\demo\beans\Perishable.class

@@ -1,0 +1,40 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+public class Perishable extends Product{
+	// date Memeber
+	private LocalDate expiredate;
+
+	// default constructor 
+	public Perishable() {
+		super();
+	}
+
+	// paramterised constructor 
+	public Perishable(LocalDate expiredate) {
+		super();
+		this.expiredate = expiredate;
+	}
+
+	// getters and setters
+	public LocalDate getExpiredate() {
+		return expiredate;
+	}
+
+	public void setExpiredate(LocalDate expiredate) {
+		this.expiredate = expiredate;
+	}
+
+	// to String Method
+	@Override
+	public String toString() {
+		return "Perishable [expiredate=" + expiredate + "]";
+	}
+	
+	
+	
+	
+	
+	
+}

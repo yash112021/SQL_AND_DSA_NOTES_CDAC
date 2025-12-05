@@ -1,0 +1,11 @@
+package com.demo.test;
+
+
+
+public class TestGetData {
+	public static void main(String[] args) {
+		// getting the data 
+		SessionFactory sf=new configuration().configure().b
+
+	}
+	}	

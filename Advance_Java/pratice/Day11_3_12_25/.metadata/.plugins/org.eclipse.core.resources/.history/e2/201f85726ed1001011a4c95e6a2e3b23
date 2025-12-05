@@ -1,0 +1,8 @@
+package com.demo.test;
+
+public class TestTableMappedInheritances {
+	public static void main(String[] args) {
+		//creating the session factory 
+	}
+
+}	

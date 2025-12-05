@@ -1,0 +1,5 @@
+com\demo\beans\Product.class
+com\demo\test\TestTableMappedInheritances.class
+com\demo\test\TestGetData.class
+com\demo\beans\NonPerishable.class
+com\demo\beans\Perishable.class

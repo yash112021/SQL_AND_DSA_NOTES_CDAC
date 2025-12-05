@@ -1,0 +1,19 @@
+package com.demo.beans;
+
+public class NonPerishable extends Product {
+	// child class which is having the gurantee
+	private int gurantee;
+
+	//default constuctor 
+	public NonPerishable() {
+		super();
+	}
+
+	// parmaterised constructor 
+	public NonPerishable(int gurantee) {
+		super();
+		this.gurantee = gurantee;
+	}
+	
+	
+}

@@ -1,0 +1,24 @@
+package com.demo.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.NonPerishable;
+import com.demo.beans.Perishable;
+import com.demo.beans.Product;
+
+public class TestGetData {
+	public static void main(String[] args) {
+		// getting the data 
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session ss=sf.openSession();
+		Transaction tr=ss.beginTransaction();
+		// now Retiruive the both the perishable and the non-perishable objects by using the get Session Command
+		Product p=ss.get(Perishable.class, 20);
+		Product p1=ss.get(NonPerishable.class, 10); 
+		
+
+	}
+	}	

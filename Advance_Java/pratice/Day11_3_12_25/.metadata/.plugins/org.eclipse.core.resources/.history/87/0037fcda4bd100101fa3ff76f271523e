@@ -1,0 +1,43 @@
+package com.demo.beans;
+
+import java.time.LocalDate;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("perishable")
+public class Perishable extends Product {
+	// child class of the product which is haveing the data Member expriy date
+	private LocalDate ldt;
+
+	// default constructor
+	public Perishable() {
+		super();
+	}
+
+	// paramterised constructor 
+	public Perishable(int pid, String pname, int qty, double price, LocalDate mfgDate, LocalDate ldt) {
+		super(pid, pname, qty, price, mfgDate);
+		this.ldt = ldt;
+	}
+
+	// getters and setters 
+	public LocalDate getLdt() {
+		return ldt;
+	}
+
+	public void setLdt(LocalDate ldt) {
+		this.ldt = ldt;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"Perishable [ldt=" + ldt + "]";
+	}
+	
+	
+	
+	
+	
+}

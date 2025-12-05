@@ -1,0 +1,4 @@
+com\demo\beans\Product.class
+com\demo\test\TestProduct.class
+com\demo\beans\NonPerishable.class
+com\demo\beans\Perishable.class

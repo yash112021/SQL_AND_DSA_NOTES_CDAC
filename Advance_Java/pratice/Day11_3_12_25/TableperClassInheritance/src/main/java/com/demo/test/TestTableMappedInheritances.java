@@ -1,0 +1,34 @@
+package com.demo.test;
+
+import java.time.LocalDate;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.demo.beans.NonPerishable;
+import com.demo.beans.Perishable;
+import com.demo.beans.Product;
+
+public class TestTableMappedInheritances {
+	public static void main(String[] args) {
+		//creating the session factory 
+		SessionFactory sf=new Configuration().configure().buildSessionFactory();
+		Session ss=sf.openSession();
+		Transaction tr=ss.beginTransaction();
+		
+		// creating the object
+//		int pid, String pname, int qty, double price, LocalDate mfgDate, LocalDate expiredate
+		Product p=new Perishable(20,"tomatoa",2,50.00,LocalDate.of(25,12,04),LocalDate.of(25,12,22));
+		Product p1=new NonPerishable(10,"Computer",10,30000.00,LocalDate.of(2024, 1, 6),1);
+//		int pid, String pname, int qty, double price, LocalDate mfgDate, int gurantee
+		ss.save(p);
+		ss.save(p1);
+		tr.commit();
+		ss.close();
+		sf.close();
+		
+	}
+
+}	
