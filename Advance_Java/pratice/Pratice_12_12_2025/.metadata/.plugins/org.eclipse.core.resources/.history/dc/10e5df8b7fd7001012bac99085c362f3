@@ -1,0 +1,13 @@
+package com.demo.RestWebApIServiceSpringBoot.service;
+
+import java.util.List;
+
+import com.demo.RestWebApIServiceSpringBoot.beans.Product_Rest;
+
+public interface ProductService {
+
+	List<Product_Rest> getallProducts();
+
+	boolean addProduct(Product_Rest pr);
+
+}

@@ -1,0 +1,2 @@
+spring.application.name=RestWebApIServiceSpringBoot
+Server.port=8686

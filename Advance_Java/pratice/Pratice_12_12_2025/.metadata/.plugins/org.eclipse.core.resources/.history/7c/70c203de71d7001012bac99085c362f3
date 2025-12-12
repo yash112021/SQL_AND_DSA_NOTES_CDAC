@@ -1,0 +1,20 @@
+package com.demo.RestWebApIServiceSpringBoot.beans;
+
+import java.time.LocalDate;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+// Product of the Class 
+
+
+public class Product_Rest {
+	private int pid;
+	private String pname;
+	private int  qty;
+	private double price;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate mfgdate;
+	
+	private int cid;
+}

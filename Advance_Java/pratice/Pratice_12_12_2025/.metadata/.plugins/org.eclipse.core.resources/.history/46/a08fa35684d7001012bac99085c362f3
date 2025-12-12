@@ -1,0 +1,14 @@
+package com.demo.RestWebApIServiceSpringBoot.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+	
+	public String sayHello() {
+		
+		System.out.println("Hello");
+		return "Hello";
+	}
+
+}

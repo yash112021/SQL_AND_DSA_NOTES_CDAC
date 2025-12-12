@@ -1,0 +1,14 @@
+package com.demo.RestWebApIServiceSpringBoot.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+// now this is our product Controller
+
+@RestController("/p")
+public class ProductController {
+
+	// show the Products
+	@GetMapping("/Showproduct")
+	
+	
+}

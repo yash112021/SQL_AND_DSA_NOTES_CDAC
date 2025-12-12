@@ -1,0 +1,12 @@
+package com.demo.RestWebApIServiceSpringBoot.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.demo.RestWebApIServiceSpringBoot.beans.Product_Rest;
+
+@Repository
+public interface ProductDao extends JpaRepository<Product_Rest, String>{
+
+	
+}

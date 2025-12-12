@@ -1,0 +1,39 @@
+package com.demo.RestWebApIServiceSpringBoot.service;
+
+import java.util.List;
+
+import org.apache.el.stream.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.RestWebApIServiceSpringBoot.beans.Product_Rest;
+import com.demo.RestWebApIServiceSpringBoot.dao.ProductDao;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+	
+	@Autowired
+	ProductDao pdao;
+
+	@Override
+	public List<Product_Rest> getallProducts() {
+		// now here by using the Jpa Method Getting the Data 
+		return pdao.findAll();
+	}
+
+	// for adding the product
+	@Override
+	public boolean addProduct(Product_Rest pr) {
+		// mean after saving also it is going to written us the object
+		return pdao.save(pr) != null;
+	}
+
+	// finding by id
+	@Override
+	public Product_Rest findByid(int prouductid) {
+       Optional<Product_Rest> p= pdao.findById(prouductid);
+       
+
+	}
+	
+}

@@ -1,0 +1,28 @@
+package com.demo.RestWebApIServiceSpringBoot.beans;
+
+import jakarta.persistence.Entity;
+
+@Entity(name="usr")
+public class User {
+	private String username;
+	private String pass;
+	private String role;
+	
+	// Paramterised Constructor 
+	public User() {
+		super();
+	}
+
+	
+	// Paramertised Constructor 
+	public User(String username, String pass, String role) {
+		super();
+		this.username = username;
+		this.pass = pass;
+		this.role = role;
+	}
+	
+
+	
+	
+}

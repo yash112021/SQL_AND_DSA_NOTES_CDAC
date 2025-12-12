@@ -1,0 +1,40 @@
+package com.demo.RestWebApIServiceSpringBoot.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.demo.RestWebApIServiceSpringBoot.beans.Product_Rest;
+import com.demo.RestWebApIServiceSpringBoot.service.ProductService;
+
+// now this is our product Controller
+
+@RestController("/p")
+public class ProductController {
+
+	
+	@Autowired 
+	ProductService pserv;
+	
+	// now here we are going to writteh the Response Entity (Statuscode  ,Data)
+	
+	// 11 show the Products
+	@GetMapping("/Showproduct")
+	public ResponseEntity<List<Product_Rest>> showproduct(){
+		// now get the list fro m the database
+		List<Product_Rest> lst=pserv.getallProducts();
+		// and sending it 
+		return ResponseEntity.ok(lst);
+	}
+	
+	// 2 now this for adding the product
+	@PostMapping("/addProduct")
+	public ResponseEntity<Product_Rest>
+	
+	
+	
+}

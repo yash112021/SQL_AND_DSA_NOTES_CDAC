@@ -1,0 +1,410 @@
+2025-12-12 10:10:11,158 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-12-12 10:10:46,725 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:MyEurekaServer:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\pom.xml.
+2025-12-12 10:10:46,725 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:CategoryRestWebService:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService\pom.xml.
+2025-12-12 10:10:48,005 [Worker-14: Building] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Could not read maven project
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$3(MavenImpl.java:415)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readProject(MavenImpl.java:405)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.lambda$4(AbstractMavenArchiverConfigurator.java:577)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.loadParentHierarchy(AbstractMavenArchiverConfigurator.java:569)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:366)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:229)
+	at org.eclipse.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:221)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:883)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:851)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1004)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:316)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1020)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:247)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:392)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:395)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:506)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:454)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:536)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService: C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService (Access is denied) @ 
+ for project  at C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:180)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:124)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$3(MavenImpl.java:413)
+	... 35 common frames omitted
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService: C:\Users\IET\Documents\advjava\Day 17\CategoryRestWebService (Access is denied) @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:687)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:303)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:267)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:173)
+	... 37 common frames omitted
+2025-12-12 10:10:55,315 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:MyEurekaServer:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\pom.xml.
+2025-12-12 10:10:58,474 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:10:58,590 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\src\test\resources
+2025-12-12 10:10:59,579 [Worker-1: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:MyEurekaServer:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\pom.xml.
+2025-12-12 10:11:01,838 [Worker-13: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:ProductRestWebservice:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\ProductRestWebservice\pom.xml.
+2025-12-12 10:11:03,740 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:11:03,785 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:11:03,793 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\ProductRestWebservice\src\test\resources
+2025-12-12 10:11:05,774 [Worker-10: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:SpringBootMVCProductCrud:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\SpringBootMVCProductCrud\pom.xml.
+2025-12-12 10:11:06,950 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:11:07,131 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:11:07,141 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\SpringBootMVCProductCrud\src\test\resources
+2025-12-12 10:11:11,046 [Worker-7: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:MyEurekaServer:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\pom.xml.
+2025-12-12 10:11:13,217 [Worker-14: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:SpringBootRestWebservice:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\SpringBootRestWebservice\pom.xml.
+2025-12-12 10:11:14,274 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:11:14,305 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:11:14,322 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\SpringBootRestWebservice\src\test\resources
+2025-12-12 10:11:16,504 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:MyEurekaServer:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\MyEurekaServer\pom.xml.
+2025-12-12 10:16:21,400 [Worker-16: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:RestWebApIServiceSpringBoot:0.0.1-SNAPSHOT @ C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\pom.xml.
+2025-12-12 10:16:22,148 [Worker-16: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestWebApIServiceSpringBoot/src/main/java
+2025-12-12 10:16:22,149 [Worker-16: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RestWebApIServiceSpringBoot/src/main/resources
+2025-12-12 10:16:22,153 [Worker-16: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /RestWebApIServiceSpringBoot/src/main/resources
+2025-12-12 10:16:22,159 [Worker-16: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /RestWebApIServiceSpringBoot/src/test/java
+2025-12-12 10:16:22,730 [Worker-16: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2025-12-12 10:16:23,245 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:16:23,266 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:16:23,271 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:18:58,154 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:18:58,168 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:18:58,175 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:19:53,563 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:19:53,573 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:19:53,578 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:21:27,826 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:21:27,837 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:21:27,843 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:22:08,990 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:22:09,001 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:22:09,006 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:22:29,718 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:22:29,843 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:22:29,851 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:23:42,348 [Worker-16: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:RestWebApIServiceSpringBoot:0.0.1-SNAPSHOT @ C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\pom.xml.
+2025-12-12 10:23:43,119 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:23:43,119 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:23:43,126 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:23:43,523 [Worker-16: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.demo:SpringBootRestWebservice:0.0.1-SNAPSHOT @ C:\Users\IET\Documents\advjava\Day 17\SpringBootRestWebservice\pom.xml.
+2025-12-12 10:23:44,240 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:23:44,241 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:23:44,245 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\SpringBootRestWebservice\src\test\resources
+2025-12-12 10:24:12,166 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2025-12-12 10:24:17,685 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606 [610])
+2025-12-12 10:24:17,689 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606
+2025-12-12 10:24:17,690 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\aether-connector-okhttp-0.17.8.jar
+2025-12-12 10:24:17,690 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\commons-lang3-3.8.1.jar
+2025-12-12 10:24:17,690 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\guice-4.2.2-no_aop.jar
+2025-12-12 10:24:17,690 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\jansi-2.4.0.jar
+2025-12-12 10:24:17,691 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-artifact-3.8.7.jar
+2025-12-12 10:24:17,691 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-builder-support-3.8.7.jar
+2025-12-12 10:24:17,691 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-compat-3.8.7.jar
+2025-12-12 10:24:17,691 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-core-3.8.7.jar
+2025-12-12 10:24:17,692 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-embedder-3.8.7.jar
+2025-12-12 10:24:17,692 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-3.8.7.jar
+2025-12-12 10:24:17,692 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-model-builder-3.8.7.jar
+2025-12-12 10:24:17,692 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-plugin-api-3.8.7.jar
+2025-12-12 10:24:17,692 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-repository-metadata-3.8.7.jar
+2025-12-12 10:24:17,693 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-api-1.6.3.jar
+2025-12-12 10:24:17,693 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-connector-basic-1.6.3.jar
+2025-12-12 10:24:17,693 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-impl-1.6.3.jar
+2025-12-12 10:24:17,693 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-provider-3.8.7.jar
+2025-12-12 10:24:17,693 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-spi-1.6.3.jar
+2025-12-12 10:24:17,694 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-transport-wagon-1.6.3.jar
+2025-12-12 10:24:17,694 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-resolver-util-1.6.3.jar
+2025-12-12 10:24:17,694 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-3.8.7.jar
+2025-12-12 10:24:17,694 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-settings-builder-3.8.7.jar
+2025-12-12 10:24:17,694 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\maven-shared-utils-3.3.4.jar
+2025-12-12 10:24:17,695 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okhttp-3.14.1.jar
+2025-12-12 10:24:17,695 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\okio-1.17.3.jar
+2025-12-12 10:24:17,695 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.inject-0.3.5.jar
+2025-12-12 10:24:17,695 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2025-12-12 10:24:17,695 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-build-api-0.0.7.jar
+2025-12-12 10:24:17,696 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-cipher-2.0.jar
+2025-12-12 10:24:17,696 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-classworlds-2.6.0.jar
+2025-12-12 10:24:17,696 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-component-annotations-2.1.0.jar
+2025-12-12 10:24:17,696 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-interpolation-1.26.jar
+2025-12-12 10:24:17,696 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-sec-dispatcher-2.0.jar
+2025-12-12 10:24:17,697 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\plexus-utils-3.3.1.jar
+2025-12-12 10:24:17,697 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-file-3.5.3.jar
+2025-12-12 10:24:17,697 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.eclipse.m2e.maven.runtime_3.8.701.20230209-1606\jars\wagon-provider-api-3.5.3.jar
+2025-12-12 10:24:17,698 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_31.1.0.jre [11])
+2025-12-12 10:24:17,699 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\com.google.guava_31.1.0.jre.jar
+2025-12-12 10:24:17,699 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [924])
+2025-12-12 10:24:17,700 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\slf4j.api_1.7.36.jar
+2025-12-12 10:24:17,701 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [35])
+2025-12-12 10:24:17,702 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2025-12-12 10:24:17,702 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221203-1659 [33])
+2025-12-12 10:24:17,703 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\javax.annotation_1.3.5.v20221203-1659.jar
+2025-12-12 10:24:17,703 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.4.0.v20221112-0806 [67])
+2025-12-12 10:24:17,704 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\org.apache.commons.cli_1.4.0.v20221112-0806.jar
+2025-12-12 10:24:17,704 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.1 [13])
+2025-12-12 10:24:17,705 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\IET\Desktop\eclipse-jee-2023-03-R-win32-x86_64\eclipse\plugins\com.google.guava.failureaccess_1.0.1.jar
+2025-12-12 10:24:17,708 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot":
+2025-12-12 10:24:17,715 [Worker-4: Launching RestWebApIServiceSpringBoot] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean install 
+2025-12-12 10:24:44,102 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:24:44,126 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:24:44,130 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:26:38,008 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:26:38,019 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:26:38,023 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:27:13,501 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:27:13,509 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:27:13,513 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:28:43,015 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:28:43,038 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:28:43,043 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:29:10,343 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:29:10,353 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:29:10,357 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:30:49,017 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:30:49,024 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:30:49,028 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:31:57,798 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:31:57,807 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:31:57,812 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:34:21,327 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:34:21,337 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:34:21,340 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:34:31,922 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:34:31,955 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:34:31,960 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:35:44,198 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:35:44,209 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:35:44,213 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:40:09,611 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:40:09,642 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:40:09,654 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:45:30,045 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:45:30,055 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:45:30,059 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:45:30,134 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:45:30,151 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:45:30,155 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Documents\advjava\Day 17\SpringBootRestWebservice\src\test\resources
+2025-12-12 10:47:30,662 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:47:30,671 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:47:30,675 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:47:45,761 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:47:45,775 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:47:45,778 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:48:06,294 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:48:06,405 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:48:06,410 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:48:54,589 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:48:54,598 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:48:54,603 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:49:49,369 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:49:49,378 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:49:49,382 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:49:57,499 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:49:57,508 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:49:57,512 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:50:01,493 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:50:01,503 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:50:01,507 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:50:13,972 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:50:13,981 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:50:13,985 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:51:34,323 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:51:34,352 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:51:34,356 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:51:38,455 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:51:38,478 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:51:38,481 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:52:16,909 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:52:16,919 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:52:16,922 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:53:57,501 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:53:57,511 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:53:57,514 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:54:06,079 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:54:06,094 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:54:06,099 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:55:38,728 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:55:38,737 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:55:38,741 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:56:20,031 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:56:20,041 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:56:20,045 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:56:25,689 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:56:25,700 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:56:25,703 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:56:31,143 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:56:31,153 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:56:31,157 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:57:54,429 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 10:57:54,439 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 10:57:54,442 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 10:59:13,477 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2025-12-12 11:00:35,606 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:00:35,616 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:00:35,620 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:03:53,327 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:03:53,337 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:03:53,342 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:07:45,650 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:07:45,659 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:07:45,663 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:08:22,617 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:08:22,627 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:08:22,630 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:08:24,699 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:08:24,710 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:08:24,714 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:09:24,112 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:09:24,120 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:09:24,124 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:09:26,409 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:09:26,426 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:09:26,431 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:09:31,844 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:09:31,854 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:09:31,858 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:09:36,860 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:09:36,868 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:09:36,872 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:10:30,454 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:10:30,463 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:10:30,466 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:10:39,074 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:10:39,083 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:10:39,086 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:10:51,575 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:10:51,584 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:10:51,588 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:11:14,125 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:11:14,134 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:11:14,138 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:11:34,255 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:11:34,264 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:11:34,267 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:13:19,421 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:13:19,432 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:13:19,436 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:13:35,311 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:13:35,321 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:13:35,325 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:14:20,247 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:14:20,264 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:14:20,267 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:14:49,529 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:14:49,546 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:14:49,549 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:15:03,131 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:15:03,148 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:15:03,151 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 11:15:50,531 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 11:15:50,543 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 11:15:50,547 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:11:52,987 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:11:52,998 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:11:53,002 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:13:15,913 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:13:15,924 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:13:15,928 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:14:45,736 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:14:45,748 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:14:45,752 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:17:17,063 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:17:17,073 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:17:17,076 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:18:21,029 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:18:21,039 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:18:21,042 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:25:20,047 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:25:20,057 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:25:20,060 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:25:25,810 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:25:25,821 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:25:25,825 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:27:08,293 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:27:08,302 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:27:08,306 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:27:11,807 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:27:11,819 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:27:11,822 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:29:33,905 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:29:33,932 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:29:33,936 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:30:29,309 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:30:29,324 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:30:29,328 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:31:14,916 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:31:14,930 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:31:14,934 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:31:38,108 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:31:38,123 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:31:38,127 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:33:13,134 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:33:13,144 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:33:13,147 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:33:20,841 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:33:20,853 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:33:20,856 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:33:30,217 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:33:30,226 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:33:30,230 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:34:34,989 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:34:35,002 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:34:35,005 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:35:32,999 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:35:33,018 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:35:33,021 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:36:34,754 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:36:34,764 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:36:34,768 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:36:47,654 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:36:47,663 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:36:47,666 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:39:14,828 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:39:14,837 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:39:14,840 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:40:07,835 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:40:07,845 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:40:07,848 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:40:19,233 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:40:19,243 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:40:19,246 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:41:38,771 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:41:38,780 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:41:38,783 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:49:03,419 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:49:03,431 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:49:03,434 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:49:12,127 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:49:12,149 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:49:12,154 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:51:11,184 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:51:11,194 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:51:11,197 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:51:22,820 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:51:22,832 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:51:22,835 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:58:43,857 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:58:43,868 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:58:43,871 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:59:27,650 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:59:27,659 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:59:27,662 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:59:43,924 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:59:43,934 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:59:43,937 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources
+2025-12-12 12:59:50,685 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-12-12 12:59:50,694 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-12-12 12:59:50,697 [Worker-58: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IET\Desktop\maven\Pratice_12_12_2025\RestWebApIServiceSpringBoot\src\test\resources

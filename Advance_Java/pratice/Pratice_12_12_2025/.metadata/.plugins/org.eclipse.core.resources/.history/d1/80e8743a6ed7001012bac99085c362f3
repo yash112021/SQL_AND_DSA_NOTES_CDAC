@@ -1,0 +1,9 @@
+package com.demo.RestWebApIServiceSpringBoot.beans;
+
+
+
+public class User {
+	private String username;
+	private String pass;
+	private String role;
+}

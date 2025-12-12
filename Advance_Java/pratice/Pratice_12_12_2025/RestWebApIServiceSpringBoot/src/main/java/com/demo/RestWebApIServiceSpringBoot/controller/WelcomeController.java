@@ -1,0 +1,29 @@
+package com.demo.RestWebApIServiceSpringBoot.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+// now this is our Welcome Controller
+
+
+@RestController
+public class WelcomeController {
+	
+	
+	@GetMapping("/")
+	public String hello() {
+		System.out.println("in helo");
+		return "";
+	}
+	
+	
+	
+	@GetMapping("/yash1")
+	public String greetings() {
+		System.out.println("in helo");
+		return "Hello yash Welcome to Adjavce JAVA Programming";
+	}
+	
+	
+	
+}
